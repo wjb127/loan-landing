@@ -158,7 +158,7 @@ export default function LeadDetailModal({
             </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }

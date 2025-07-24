@@ -19,7 +19,7 @@ export default function LeadDetailModal({
   isPending 
 }: LeadDetailModalProps) {
   const [notes, setNotes] = useState(lead.notes || '')
-  const [status, setStatus] = useState(lead.status || 'new')
+  const [status, setStatus] = useState<Lead['status']>(lead.status)
 
   const handleStatusChange = async (newStatus: Lead['status']) => {
     setStatus(newStatus)

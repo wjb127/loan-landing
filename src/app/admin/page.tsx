@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useTransition } from 'react'
 import { supabase, isDemoMode, type Lead } from '@/lib/supabase'
+import { getStatusText } from '@/lib/utils'
 import LeadsTable from '@/components/admin/LeadsTable'
 import StatsCards from '@/components/admin/StatsCards'
 import LeadDetailModal from '@/components/admin/LeadDetailModal'
@@ -218,14 +219,4 @@ export default function AdminDashboard() {
       </main>
     </div>
   )
-}
-
-export function getStatusText(status: Lead['status']) {
-  switch (status) {
-    case 'new': return '신규'
-    case 'contacted': return '연락완료'
-    case 'converted': return '전환완료'
-    case 'rejected': return '거절'
-    default: return '알 수 없음'
-  }
 }

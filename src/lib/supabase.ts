@@ -26,6 +26,6 @@ export interface Lead {
   name: string
   contact: string
   created_at?: string
-  status?: 'new' | 'contacted' | 'converted' | 'rejected'
+  status: 'new' | 'contacted' | 'converted' | 'rejected'
   notes?: string
 }

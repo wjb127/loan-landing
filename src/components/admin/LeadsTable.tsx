@@ -1,5 +1,5 @@
 import { type Lead } from '@/lib/supabase'
-import { getStatusText } from '@/app/admin/page'
+import { getStatusText } from '@/lib/utils'
 
 interface LeadsTableProps {
   leads: Lead[]

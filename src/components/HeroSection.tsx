@@ -57,8 +57,6 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Diagonal decoration at bottom */}
-        <div className="absolute bottom-0 right-0 w-full h-20 bg-white transform skew-y-1 origin-bottom-right"></div>
       </div>
     </section>
   )

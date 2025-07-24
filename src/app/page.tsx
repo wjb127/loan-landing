@@ -1,13 +1,17 @@
+import HeroSection from '@/components/HeroSection'
 import ProcessSteps from '@/components/ProcessSteps'
 import EligibilitySection from '@/components/EligibilitySection'
 import TargetAudienceSection from '@/components/TargetAudienceSection'
 import Footer from '@/components/Footer'
-import StickyLeadForm from '@/components/StickyLeadForm'
+import AlwaysOpenLeadForm from '@/components/AlwaysOpenLeadForm'
 
 export default function Home() {
   return (
     <>
-      <main className="bg-gray-50 pb-32">
+      {/* Hero Section */}
+      <HeroSection />
+      
+      <main className="bg-gray-50 pb-40">
         {/* Process Steps Section */}
         <section className="bg-white py-16">
           <div className="max-w-6xl mx-auto px-4">
@@ -18,7 +22,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Blue Background Section with Form */}
+        {/* Blue Background Section */}
         <section className="bg-gradient-to-br from-blue-500 to-blue-600 py-16 relative">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-8">
@@ -60,7 +64,7 @@ export default function Home() {
       </main>
       
       <Footer />
-      <StickyLeadForm />
+      <AlwaysOpenLeadForm />
     </>
   )
 }

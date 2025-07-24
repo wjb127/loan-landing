@@ -160,33 +160,6 @@ export default function PrivacyPolicy() {
                 </ul>
               </div>
 
-              <div className="bg-gray-50 p-4 rounded">
-                <h3 className="font-medium text-gray-800 mb-3">※ 회사의 개인정보 제3자 제공현황</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <p className="text-sm font-medium mb-2">개인정보를 제공받는 자:</p>
-                    <ul className="text-sm space-y-1">
-                      <li>• (주) 에스엠플러스</li>
-                      <li>• (주) 태산</li>
-                      <li>• 저스티스솔루션</li>
-                      <li>• 주식회사 바이원파트너스</li>
-                      <li>• 주식회사 솔레</li>
-                      <li>• 주식회사 트리플러스</li>
-                      <li>• 주식회사 애드탱크</li>
-                      <li>• 주식회사 에이유파트너스</li>
-                      <li>• 주식회사 엔에프플러스</li>
-                    </ul>
-                    <p className="text-xs text-gray-600 mt-2">※ 회사가 중개업무를 취급하는 회사</p>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium mb-2">제공할 개인정보의 내용:</p>
-                    <p className="text-sm">성명, 주소, 생년월일, 성별, 전화번호</p>
-                    
-                    <p className="text-sm font-medium mb-2 mt-4">제공받는자의 이용목적:</p>
-                    <p className="text-sm">대출중개업무 및 보험중개업무를 위한 기본정보제공, 전자금융서비스 연동, 수수료정산</p>
-                  </div>
-                </div>
-              </div>
             </section>
 
             <section>

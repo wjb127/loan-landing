@@ -107,7 +107,7 @@ export default function AlwaysOpenLeadForm() {
                 ※ 허위, 허황, 파산, 면책, 무직, 신용불량자는 신청이 불가합니다.
               </p>
               <p className="text-xs text-red-500 mt-2">
-                *정확한정보/정확한금액이 아니다대출상담서비스입니다.
+                *정부지원/정책자금이 아닌 대출상담서비스입니다.
               </p>
             </div>
 

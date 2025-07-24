@@ -11,7 +11,7 @@ export default function HeroSection() {
         {/* Header badge */}
         <div className="text-center mb-8">
           <div className="inline-block border-2 border-white border-opacity-50 rounded-full px-6 py-2 text-white text-sm">
-            웰스대부중개 대부중개 등록번호 2025-대구남구-0006
+            주식회사 에이스대부중개법인 등록번호 2025-대구남구-0006
           </div>
         </div>
 

@@ -7,12 +7,12 @@ export default function Footer() {
           <div className="space-y-2">
             <div className="text-white font-semibold mb-3">회사 정보</div>
             <div>• 사이트명: 안심대출</div>
-            <div>• 회사명: 웰스대부중개</div>
-            <div>• 대부중개업등록번호: 2023-경기포천-01(대부중개)</div>
-            <div>• 사업자번호: 769-59-00728</div>
-            <div>• 대표자: 손민수</div>
-            <div>• 등록기관: 포천시청(일자리경제과 031-538-3197)</div>
-            <div>• 대표번호: 010-5568-6935</div>
+            <div>• 회사명: 주식회사 에이스대부중개법인</div>
+            <div>• 대부중개업등록번호: 2025-대구남구-0006</div>
+            <div>• 사업자등록번호: 601-81-39646</div>
+            <div>• 법인등록번호: 170111-0984428</div>
+            <div>• 대표자: 심상민</div>
+            <div>• 대표번호: 1577-8505</div>
           </div>
 
           {/* 주소 및 대출 조건 */}
@@ -20,8 +20,7 @@ export default function Footer() {
             <div className="text-white font-semibold mb-3">주소 및 대출 조건</div>
             <div className="mb-3">
               <strong>주소:</strong><br/>
-              경기도 포천시 소홀읍 호국로287번길 9-20,<br/>
-              23동 208호
+              대구광역시 남구 명덕로 110-2, 4층
             </div>
             <div>• 대출금리: 연20% 이내</div>
             <div>• 연체이율: 연20% 이내</div>
@@ -82,7 +81,7 @@ export default function Footer() {
             본 사업자는 금융소비자 정보포털 파인에서 조회 가능합니다.
           </p>
           <p>
-            © 2025 웰스대부중개. All rights reserved.
+            © 2025 주식회사 에이스대부중개법인. All rights reserved.
           </p>
         </div>
       </div>

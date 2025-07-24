@@ -162,7 +162,7 @@ export default function AdminDashboard() {
               )}
             </div>
             <div className="text-right">
-              <div className="text-sm text-gray-600">웰스대부중개</div>
+              <div className="text-sm text-gray-600">주식회사 에이스대부중개법인</div>
               <div className="text-xs text-gray-500">관리자 시스템</div>
             </div>
           </div>

@@ -6,8 +6,11 @@ import { getStatusText } from '@/lib/utils'
 import LeadsTable from '@/components/admin/LeadsTable'
 import StatsCards from '@/components/admin/StatsCards'
 import LeadDetailModal from '@/components/admin/LeadDetailModal'
+import LeadCharts from '@/components/admin/LeadCharts'
+import PasswordProtection from '@/components/admin/PasswordProtection'
 
 export default function AdminDashboard() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [isPending, startTransition] = useTransition()
   const [leads, setLeads] = useState<Lead[]>([])
   const [loading, setLoading] = useState(true)
@@ -16,8 +19,18 @@ export default function AdminDashboard() {
   const [filter, setFilter] = useState<'all' | 'new' | 'contacted' | 'converted' | 'rejected'>('all')
 
   useEffect(() => {
-    fetchLeads()
+    // Check if already authenticated
+    const authStatus = sessionStorage.getItem('admin_authenticated')
+    if (authStatus === 'true') {
+      setIsAuthenticated(true)
+    }
   }, [])
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      fetchLeads()
+    }
+  }, [isAuthenticated])
 
   const fetchLeads = async () => {
     try {
@@ -131,9 +144,39 @@ export default function AdminDashboard() {
     })
   }
 
+  const deleteLead = async (leadId: string) => {
+    startTransition(async () => {
+      try {
+        if (isDemoMode || !supabase) {
+          // Demo mode: Remove from local state only
+          setLeads(leads.filter(lead => lead.id !== leadId))
+          console.log('🗑️ Demo Mode - Lead deleted:', { leadId })
+        } else {
+          // Production mode: Delete from Supabase
+          const { error } = await supabase
+            .from('kmong_2_leads')
+            .delete()
+            .eq('id', leadId)
+
+          if (error) throw error
+          
+          setLeads(leads.filter(lead => lead.id !== leadId))
+        }
+      } catch (err) {
+        console.error('Error deleting lead:', err)
+        setError('리드 삭제 중 오류가 발생했습니다.')
+      }
+    })
+  }
+
   const filteredLeads = leads.filter(lead => 
     filter === 'all' || lead.status === filter
   )
+
+  // Show password protection if not authenticated
+  if (!isAuthenticated) {
+    return <PasswordProtection onAuthenticated={() => setIsAuthenticated(true)} />
+  }
 
   if (loading) {
     return (
@@ -179,6 +222,9 @@ export default function AdminDashboard() {
         {/* Stats Cards */}
         <StatsCards leads={leads} />
 
+        {/* Lead Charts */}
+        <LeadCharts leads={leads} />
+
         {/* Filter Buttons */}
         <div className="bg-white p-4 rounded-lg shadow mb-6">
           <div className="flex flex-wrap gap-2">
@@ -213,6 +259,7 @@ export default function AdminDashboard() {
             onClose={() => setSelectedLead(null)}
             onUpdateStatus={updateLeadStatus}
             onUpdateNotes={updateLeadNotes}
+            onDeleteLead={deleteLead}
             isPending={isPending}
           />
         )}

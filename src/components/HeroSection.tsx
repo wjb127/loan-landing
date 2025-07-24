@@ -25,65 +25,112 @@ export default function HeroSection() {
           </h2>
         </div>
 
-        {/* Illustration area - Business people illustrations */}
-        <div className="flex justify-center items-center mb-12 space-x-6">
-          {/* Person with laptop */}
-          <div className="w-20 h-20">
-            <svg viewBox="0 0 100 100" className="w-full h-full">
-              <circle cx="50" cy="25" r="12" fill="#FFE0B2"/>
-              <path d="M38 37c0-6 5-11 12-11s12 5 12 11v20c0 6-5 11-12 11s-12-5-12-11V37z" fill="#2196F3"/>
-              <rect x="42" y="65" width="16" height="10" rx="2" fill="#FF7043"/>
-              <rect x="40" y="75" width="20" height="12" rx="2" fill="#37474F"/>
-              <rect x="42" y="77" width="16" height="8" rx="1" fill="#00E676"/>
-              <path d="M30 45h40v8c0 2-2 4-4 4H34c-2 0-4-2-4-4v-8z" fill="#FFE0B2"/>
-            </svg>
-          </div>
+        {/* Illustration area - Celebrating people with megaphone */}
+        <div className="relative mb-12 h-80">
+          <svg viewBox="0 0 800 400" className="w-full h-full max-w-4xl mx-auto">
+            {/* Person 1 - With megaphone (left) */}
+            <g transform="translate(100, 100)">
+              {/* Head */}
+              <circle cx="50" cy="50" r="30" fill="#F4D1AE"/>
+              {/* Hair */}
+              <path d="M20 40 Q20 20 50 15 Q80 20 80 40 L80 45 Q65 30 35 30 Q20 30 20 45 Z" fill="#5C4033"/>
+              {/* Eyes */}
+              <circle cx="35" cy="50" r="2" fill="#333"/>
+              <circle cx="65" cy="50" r="2" fill="#333"/>
+              {/* Smile */}
+              <path d="M35 60 Q50 70 65 60" stroke="#333" strokeWidth="2" fill="none"/>
+              {/* Body */}
+              <path d="M20 80 Q20 100 30 120 L30 200 L70 200 L70 120 Q80 100 80 80 Z" fill="#7986CB"/>
+              {/* Arm with megaphone */}
+              <path d="M80 100 L120 80 L120 90 L80 110 Z" fill="#F4D1AE"/>
+              {/* Megaphone */}
+              <path d="M120 70 L180 50 L180 110 L120 90 Z" fill="#FF5252"/>
+              <path d="M180 50 L200 40 L200 120 L180 110 Z" fill="#FF7043"/>
+              <circle cx="200" cy="80" r="30" fill="none" stroke="#FFF" strokeWidth="2" strokeDasharray="5,5" opacity="0.5"/>
+              {/* Other arm raised */}
+              <path d="M20 100 L0 60 L10 55 L30 95 Z" fill="#F4D1AE"/>
+            </g>
 
-          {/* Person with megaphone */}
-          <div className="w-20 h-20">
-            <svg viewBox="0 0 100 100" className="w-full h-full">
-              <circle cx="45" cy="25" r="12" fill="#FFE0B2"/>
-              <path d="M33 37c0-6 5-11 12-11s12 5 12 11v20c0 6-5 11-12 11s-12-5-12-11V37z" fill="#FF7043"/>
-              <path d="M25 42h15v8H25z" fill="#FFE0B2"/>
-              <path d="M15 38l10 6v8l-10 6c-3-2-3-6 0-8v-4c-3-2-3-6 0-8z" fill="#FF5722"/>
-              <circle cx="22" cy="46" r="2" fill="#FFF"/>
-              <path d="M65 35l8 4v12l-8 4c-2-1-2-3 0-4v-8c-2-1-2-3 0-4z" fill="#FF9800"/>
-            </svg>
-          </div>
+            {/* Person 2 - Jumping with joy (center-left) */}
+            <g transform="translate(250, 80)">
+              {/* Head */}
+              <circle cx="50" cy="50" r="30" fill="#F4D1AE"/>
+              {/* Hair */}
+              <path d="M20 40 Q20 20 50 15 Q80 20 80 40 L75 50 Q65 35 35 35 Q25 35 25 50 Z" fill="#FF6F00"/>
+              {/* Eyes */}
+              <circle cx="35" cy="50" r="2" fill="#333"/>
+              <circle cx="65" cy="50" r="2" fill="#333"/>
+              {/* Big smile */}
+              <path d="M30 60 Q50 75 70 60" stroke="#333" strokeWidth="3" fill="none"/>
+              {/* Body - jumping pose */}
+              <path d="M20 80 Q20 100 30 120 L25 180 L40 185 L50 130 L60 185 L75 180 L70 120 Q80 100 80 80 Z" fill="#FF7043"/>
+              {/* Arms up */}
+              <path d="M20 90 L0 40 L10 35 L30 85 Z" fill="#F4D1AE"/>
+              <path d="M80 90 L100 40 L90 35 L70 85 Z" fill="#F4D1AE"/>
+              {/* Motion lines */}
+              <path d="M-20 180 L-10 180" stroke="#FFB74D" strokeWidth="3"/>
+              <path d="M110 180 L120 180" stroke="#FFB74D" strokeWidth="3"/>
+            </g>
 
-          {/* Business person pointing up */}
-          <div className="w-20 h-20">
-            <svg viewBox="0 0 100 100" className="w-full h-full">
-              <circle cx="50" cy="25" r="12" fill="#FFE0B2"/>
-              <path d="M38 37c0-6 5-11 12-11s12 5 12 11v20c0 6-5 11-12 11s-12-5-12-11V37z" fill="#1976D2"/>
-              <rect x="46" y="53" width="8" height="4" fill="#1976D2"/>
-              <path d="M30 45h40v8c0 2-2 4-4 4H34c-2 0-4-2-4-4v-8z" fill="#FFE0B2"/>
-              <path d="M48 15l2-8 2 8-2 2-2-2z" fill="#FFE0B2"/>
-              <circle cx="50" cy="12" r="2" fill="#FF5722"/>
-            </svg>
-          </div>
+            {/* Person 3 - Professional with raised arm (center) */}
+            <g transform="translate(400, 120)">
+              {/* Head */}
+              <circle cx="50" cy="50" r="30" fill="#F4D1AE"/>
+              {/* Hair */}
+              <path d="M20 40 Q20 20 50 15 Q80 20 80 40 L80 45 Q70 30 30 30 Q20 30 20 45 Z" fill="#424242"/>
+              {/* Eyes */}
+              <circle cx="35" cy="50" r="2" fill="#333"/>
+              <circle cx="65" cy="50" r="2" fill="#333"/>
+              {/* Smile */}
+              <path d="M35 60 Q50 65 65 60" stroke="#333" strokeWidth="2" fill="none"/>
+              {/* Body - suit */}
+              <path d="M20 80 Q20 100 30 120 L30 200 L70 200 L70 120 Q80 100 80 80 Z" fill="#1565C0"/>
+              {/* Tie */}
+              <rect x="45" y="80" width="10" height="40" fill="#D32F2F"/>
+              {/* Arm raised */}
+              <path d="M80 100 L100 40 L90 35 L70 95 Z" fill="#F4D1AE"/>
+              {/* Hand waving */}
+              <circle cx="95" cy="37" r="8" fill="#F4D1AE"/>
+              {/* Other arm */}
+              <path d="M20 100 L10 140 L20 145 L30 105 Z" fill="#F4D1AE"/>
+            </g>
 
-          {/* Person with raised hand */}
-          <div className="w-20 h-20">
-            <svg viewBox="0 0 100 100" className="w-full h-full">
-              <circle cx="50" cy="25" r="12" fill="#FFE0B2"/>
-              <path d="M38 37c0-6 5-11 12-11s12 5 12 11v20c0 6-5 11-12 11s-12-5-12-11V37z" fill="#FF7043"/>
-              <path d="M62 35l8-5v12l-8 5c-2-1-2-3 0-4v-4c-2-1-2-3 0-4z" fill="#FFE0B2"/>
-              <path d="M30 45h40v8c0 2-2 4-4 4H34c-2 0-4-2-4-4v-8z" fill="#FFE0B2"/>
-              <circle cx="50" cy="25" r="2" fill="#2196F3"/>
-            </svg>
-          </div>
+            {/* Person 4 - Woman celebrating (right) */}
+            <g transform="translate(550, 100)">
+              {/* Head */}
+              <circle cx="50" cy="50" r="30" fill="#F4D1AE"/>
+              {/* Hair - long */}
+              <path d="M20 40 Q20 20 50 15 Q80 20 80 40 L80 70 Q75 80 70 70 L70 50 Q60 35 40 35 Q30 35 30 50 L30 70 Q25 80 20 70 Z" fill="#6D4C41"/>
+              {/* Eyes */}
+              <circle cx="35" cy="50" r="2" fill="#333"/>
+              <circle cx="65" cy="50" r="2" fill="#333"/>
+              {/* Excited expression */}
+              <ellipse cx="50" cy="65" rx="8" ry="5" fill="#333"/>
+              {/* Body */}
+              <path d="M20 80 Q20 100 30 120 L30 200 L70 200 L70 120 Q80 100 80 80 Z" fill="#EC407A"/>
+              {/* Both arms up in victory */}
+              <path d="M20 90 L5 50 L15 45 L30 85 Z" fill="#F4D1AE"/>
+              <path d="M80 90 L95 50 L85 45 L70 85 Z" fill="#F4D1AE"/>
+              {/* Victory hands */}
+              <circle cx="10" cy="47" r="8" fill="#F4D1AE"/>
+              <circle cx="90" cy="47" r="8" fill="#F4D1AE"/>
+            </g>
 
-          {/* Business woman */}
-          <div className="w-20 h-20">
-            <svg viewBox="0 0 100 100" className="w-full h-full">
-              <circle cx="50" cy="25" r="12" fill="#FFE0B2"/>
-              <path d="M40 20c0-8 4-12 10-12s10 4 10 12v8c0-2-4-4-10-4s-10 2-10 8v-12z" fill="#8D6E63"/>
-              <path d="M38 37c0-6 5-11 12-11s12 5 12 11v20c0 6-5 11-12 11s-12-5-12-11V37z" fill="#E91E63"/>
-              <path d="M30 45h40v8c0 2-2 4-4 4H34c-2 0-4-2-4-4v-8z" fill="#FFE0B2"/>
-              <path d="M65 40l8 4v8l-8-4c-2 1-2-1 0-2v-4c-2-1-2-1 0-2z" fill="#FFE0B2"/>
-            </svg>
-          </div>
+            {/* Decorative elements */}
+            {/* Confetti */}
+            <rect x="150" y="50" width="10" height="20" fill="#FFD54F" transform="rotate(25 155 60)"/>
+            <rect x="300" y="40" width="8" height="15" fill="#4FC3F7" transform="rotate(-30 304 47)"/>
+            <rect x="450" y="60" width="12" height="18" fill="#AED581" transform="rotate(45 456 69)"/>
+            <rect x="600" y="50" width="10" height="16" fill="#F06292" transform="rotate(-20 605 58)"/>
+            
+            {/* Stars */}
+            <path d="M200 30 L205 40 L215 40 L207 47 L210 57 L200 50 L190 57 L193 47 L185 40 L195 40 Z" fill="#FFD54F"/>
+            <path d="M500 40 L503 46 L509 46 L504 50 L506 56 L500 52 L494 56 L496 50 L491 46 L497 46 Z" fill="#FF7043"/>
+            
+            {/* Motion lines */}
+            <path d="M100 250 L120 250" stroke="#64B5F6" strokeWidth="4" strokeLinecap="round"/>
+            <path d="M680 250 L700 250" stroke="#64B5F6" strokeWidth="4" strokeLinecap="round"/>
+          </svg>
         </div>
 
         {/* Key information boxes */}

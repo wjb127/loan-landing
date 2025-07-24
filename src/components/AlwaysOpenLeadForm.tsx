@@ -104,10 +104,7 @@ export default function AlwaysOpenLeadForm() {
             <div className="lg:col-span-1">
               <h3 className="text-red-600 font-bold text-lg mb-2">원클릭 상담 신청</h3>
               <p className="text-sm text-gray-600 mb-2">
-                ※ 허위, 허황, 파산, 면적, 무직, 신용불량자는
-              </p>
-              <p className="text-sm text-red-600 font-medium">
-                신청이 불가합니다.
+                ※ 허위, 허황, 파산, 면책, 무직, 신용불량자는 신청이 불가합니다.
               </p>
               <p className="text-xs text-red-500 mt-2">
                 *정확한정보/정확한금액이 아니다대출상담서비스입니다.

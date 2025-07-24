@@ -11,7 +11,7 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
       
-      <main className="bg-gray-50 pb-40">
+      <main className="bg-gray-50 pb-60">
         {/* Process Steps Section */}
         <section className="bg-white py-16">
           <div className="max-w-6xl mx-auto px-4">

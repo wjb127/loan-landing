@@ -3,7 +3,7 @@ import ProcessSteps from '@/components/ProcessSteps'
 import EligibilitySection from '@/components/EligibilitySection'
 import TargetAudienceSection from '@/components/TargetAudienceSection'
 import Footer from '@/components/Footer'
-import AlwaysOpenLeadForm from '@/components/AlwaysOpenLeadForm'
+import CollapsibleMobileForm from '@/components/CollapsibleMobileForm'
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
       
-      <main className="bg-white pb-40 md:pb-60">
+      <main className="bg-white pb-20 md:pb-60">
         {/* Process Steps Section */}
         <section className="bg-white py-16">
           <div className="max-w-6xl mx-auto px-4">
@@ -64,7 +64,7 @@ export default function Home() {
       </main>
       
       <Footer />
-      <AlwaysOpenLeadForm />
+      <CollapsibleMobileForm />
     </>
   )
 }

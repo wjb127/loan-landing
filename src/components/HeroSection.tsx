@@ -1,13 +1,13 @@
 export default function HeroSection() {
   return (
     <section className="min-h-screen relative overflow-hidden" style={{ backgroundColor: '#0a2263' }}>
-      {/* Company Logo - Triangle Logo Image */}
-      <div className="absolute inset-0 flex items-start justify-center pt-24">
-        <div className="animate-bounce" style={{ animationDuration: '3s', animationIterationCount: 'infinite' }}>
+      {/* Company Logo - Triangle Logo Image Fixed Position */}
+      <div className="absolute inset-0 flex items-center justify-center" style={{ paddingTop: '120px' }}>
+        <div>
           <img 
             src="/triangle-logo.png" 
             alt="Company Logo"
-            className="w-80 h-64 object-contain"
+            className="w-64 h-48 object-contain"
           />
         </div>
       </div>

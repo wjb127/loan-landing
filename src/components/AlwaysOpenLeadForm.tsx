@@ -96,14 +96,14 @@ export default function AlwaysOpenLeadForm() {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-slate-800 shadow-2xl border-t-4 border-amber-400 z-50">
+    <div className="fixed bottom-0 left-0 right-0 bg-blue-900 shadow-2xl border-t-4 border-amber-400 z-50">
       <div className="max-w-6xl mx-auto px-4 py-6">
-        <div className="bg-slate-700 border border-amber-400 border-opacity-30 rounded-lg p-6">
+        <div className="bg-blue-800 border border-amber-400 border-opacity-40 rounded-lg p-6">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-center">
             {/* Left side - Form info */}
             <div className="lg:col-span-1">
               <h3 className="text-amber-400 font-bold text-lg mb-2">원클릭 상담 신청</h3>
-              <p className="text-sm text-slate-300 mb-2">
+              <p className="text-sm text-slate-200 mb-2">
                 ※ 허위, 허황, 파산, 면책, 무직, 신용불량자는 신청이 불가합니다.
               </p>
               <p className="text-xs text-red-400 mt-2">
@@ -119,7 +119,7 @@ export default function AlwaysOpenLeadForm() {
                   <div className="text-lg font-semibold text-green-400 mb-2">
                     신청이 완료되었습니다!
                   </div>
-                  <div className="text-sm text-slate-300">
+                  <div className="text-sm text-slate-200">
                     빠른 시일 내에 연락드리겠습니다.
                   </div>
                 </div>
@@ -138,7 +138,7 @@ export default function AlwaysOpenLeadForm() {
                       placeholder="이름"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="px-4 py-3 bg-slate-600 border border-slate-500 text-white placeholder-slate-400 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent"
+                      className="px-4 py-3 bg-blue-700 border border-blue-600 text-white placeholder-slate-300 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent"
                       disabled={isPending}
                     />
                     <input
@@ -147,14 +147,14 @@ export default function AlwaysOpenLeadForm() {
                       placeholder="연락처(-없이 입력)"
                       value={formData.contact}
                       onChange={handleInputChange}
-                      className="px-4 py-3 bg-slate-600 border border-slate-500 text-white placeholder-slate-400 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent"
+                      className="px-4 py-3 bg-blue-700 border border-blue-600 text-white placeholder-slate-300 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent"
                       disabled={isPending}
                     />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <div className="flex items-center space-x-4 text-sm text-slate-300">
+                      <div className="flex items-center space-x-4 text-sm text-slate-200">
                         <label className="flex items-center">
                           <input
                             type="radio"
@@ -180,7 +180,7 @@ export default function AlwaysOpenLeadForm() {
                       </div>
                     </div>
                     <div>
-                      <div className="flex items-center space-x-4 text-sm text-slate-300">
+                      <div className="flex items-center space-x-4 text-sm text-slate-200">
                         <label className="flex items-center">
                           <input
                             type="radio"
@@ -207,7 +207,7 @@ export default function AlwaysOpenLeadForm() {
                     </div>
                   </div>
 
-                  <div className="flex items-center text-sm text-slate-300">
+                  <div className="flex items-center text-sm text-slate-200">
                     <input
                       type="checkbox"
                       name="privacyAgreed"

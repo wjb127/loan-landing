@@ -22,8 +22,8 @@ export default function ProcessSteps() {
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 relative">
         {steps.map((step, index) => (
           <div key={index} className="flex flex-col items-center text-center">
-            {/* Step Icon */}
-            <div className="w-40 h-40 rounded-full overflow-hidden mb-6 shadow-lg relative bg-gray-200">
+            {/* Step Icon with floating animation */}
+            <div className="w-40 h-40 rounded-full overflow-hidden mb-6 shadow-lg relative bg-gray-200 animate-bounce" style={{animationDuration: '2s', animationDelay: `${index * 0.3}s`}}>
               <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
                 {index === 0 && (
                   <svg className="w-20 h-20 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
@@ -46,20 +46,20 @@ export default function ProcessSteps() {
               </div>
             </div>
             
-            {/* Step Title */}
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            {/* Step Title with animation */}
+            <h3 className="text-xl font-bold text-gray-800 mb-2 animate-pulse" style={{animationDelay: `${index * 0.5 + 1}s`}}>
               {step.title}
             </h3>
             
-            {/* Step Description */}
-            <p className="text-sm text-gray-600 whitespace-pre-line leading-relaxed">
+            {/* Step Description with animation */}
+            <p className="text-sm text-gray-600 whitespace-pre-line leading-relaxed animate-bounce" style={{animationDuration: '3s', animationDelay: `${index * 0.4 + 1.5}s`}}>
               {step.description}
             </p>
             
-            {/* Arrow (except for last step) */}
+            {/* Arrow (except for last step) with animation */}
             {index < steps.length - 1 && (
-              <div className="hidden md:block absolute top-20 left-full transform -translate-y-1/2 translate-x-4">
-                <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="hidden md:block absolute top-20 left-full transform -translate-y-1/2 translate-x-4 animate-pulse" style={{animationDelay: `${index * 0.8 + 2}s`}}>
+                <svg className="w-8 h-8 text-gray-400 animate-bounce" style={{animationDuration: '1s'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>

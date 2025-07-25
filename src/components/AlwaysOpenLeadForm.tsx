@@ -102,7 +102,7 @@ export default function AlwaysOpenLeadForm() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-3 md:gap-6 items-center">
             {/* Left side - Form info */}
             <div className="lg:col-span-1">
-              <h3 className="text-gray-900 font-bold text-base md:text-lg mb-1 md:mb-2">원클릭 상담 신청</h3>
+              <h3 className="text-gray-900 font-bold text-base md:text-lg mb-1 md:mb-2 animate-pulse">원클릭 상담 신청</h3>
               <p className="text-xs md:text-sm text-gray-600 mb-1 md:mb-2">
                 ※ 허위, 허황, 파산, 면책, 무직, 신용불량자는 신청이 불가합니다.
               </p>
@@ -231,7 +231,7 @@ export default function AlwaysOpenLeadForm() {
                 <button
                   onClick={handleSubmit}
                   disabled={isPending || !formData.name || !formData.contact || !formData.privacyAgreed}
-                  className="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-base md:text-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed border border-gray-700"
+                  className="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-base md:text-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed border border-gray-700 animate-pulse"
                 >
                   {isPending ? '처리중...' : '신청'}
                 </button>

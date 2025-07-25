@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="min-h-screen relative overflow-hidden" style={{ backgroundColor: '#1a237e' }}>
+    <section className="min-h-screen relative overflow-hidden" style={{ backgroundColor: '#0a2263' }}>
       {/* Company Logo - Triangle Logo Image */}
       <div className="absolute inset-0 flex items-start justify-center pt-24">
         <div className="animate-bounce" style={{ animationDuration: '3s', animationIterationCount: 'infinite' }}>

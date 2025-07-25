@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-gray-300 py-8 mb-48">
+    <footer className="bg-slate-800 text-slate-300 py-8 mb-48">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
           {/* 회사 정보 */}
@@ -25,7 +25,7 @@ export default function Footer() {
             <div>• 대출금리: 연20% 이내</div>
             <div>• 연체이율: 연20% 이내</div>
             <div>• 대출중개수수료: 없음</div>
-            <div className="text-yellow-300 font-medium">
+            <div className="text-amber-400 font-medium">
               ※ 취급 수수료 등 기타 부대비용이 없습니다.
             </div>
           </div>
@@ -50,8 +50,8 @@ export default function Footer() {
         </div>
 
         {/* 대출 상품 정보 */}
-        <div className="border-t border-gray-700 mt-6 pt-6">
-          <div className="bg-gray-700 p-4 rounded-lg">
+        <div className="border-t border-slate-600 mt-6 pt-6">
+          <div className="bg-slate-700 border border-amber-400 border-opacity-20 p-4 rounded-lg">
             <h3 className="text-white font-semibold mb-3">대출 상품 안내</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div className="space-y-1">
@@ -60,12 +60,12 @@ export default function Footer() {
                 <div>• 연체이자율: 약정금리+3% (단, 법정 최고금리 20% 이내)</div>
                 <div>• 채무의 조기상환수수료율: 없음</div>
               </div>
-              <div className="bg-blue-900 p-3 rounded">
-                <div className="text-white font-medium mb-2">대출 총비용 예시</div>
-                <div className="text-sm text-blue-200">
+              <div className="bg-slate-900 border border-amber-400 border-opacity-30 p-3 rounded">
+                <div className="text-amber-400 font-medium mb-2">대출 총비용 예시</div>
+                <div className="text-sm text-slate-300">
                   1,000,000원을 12개월 동안<br/>
                   이자 20.0%로 대출할 시<br/>
-                  <span className="text-yellow-300 font-semibold">
+                  <span className="text-amber-400 font-semibold">
                     총 상환금액: 1,134,715원
                   </span><br/>
                   <span className="text-xs">(대출 상품에 따라 달라질 수 있습니다.)</span>
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         {/* 하단 정보 */}
-        <div className="border-t border-gray-700 mt-6 pt-4 text-center text-xs text-gray-400">
+        <div className="border-t border-slate-600 mt-6 pt-4 text-center text-xs text-slate-400">
           <p className="mb-2">
             본 사업자는 금융소비자 정보포털 파인에서 조회 가능합니다.
           </p>

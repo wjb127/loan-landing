@@ -1,12 +1,71 @@
+'use client'
+
 export default function StatisticsSection() {
+  // 현재 날짜 가져오기
+  const getCurrentDate = () => {
+    const now = new Date()
+    const year = now.getFullYear()
+    const month = String(now.getMonth() + 1).padStart(2, '0')
+    const day = String(now.getDate()).padStart(2, '0')
+    return `${year}년 ${month}월 ${day}일`
+  }
+
+  // 기준일부터 현재까지의 일수 계산
+  const getDateDifference = () => {
+    const baseDate = new Date('2025-07-25')
+    const currentDate = new Date()
+    const diffTime = Math.abs(currentDate - baseDate)
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+    return diffDays
+  }
+
+  // 동적 통계 계산 (랜덤성 추가)
+  const daysPassed = getDateDifference()
+  
+  // 기본 일일 증가량에 랜덤성 추가 (±20% 변동)
+  const getRandomizedIncrease = (baseAmount: number) => {
+    const randomFactor = 0.8 + (Math.random() * 0.4) // 0.8 ~ 1.2 사이
+    return Math.floor(baseAmount * randomFactor)
+  }
+  
+  const baseDailyApprovals = 13 // 일일 승인자 증가량 (127 → 13)
+  const baseDailyLoanAmount = 0.18 // 일일 대출금액 증가량 (1.8억 → 0.18억)
+  const baseDailyInquiries = 850 // 조회수는 유지
+  
+  const baseApprovals = 11657327
+  const baseLoanAmount = 7256 // 억원
+  const baseInquiries = 34551276
+  
+  // 각 날짜별 누적 증가량 계산 (랜덤성 적용)
+  let totalApprovalIncrease = 0
+  let totalLoanIncrease = 0
+  let totalInquiryIncrease = 0
+  
+  for (let day = 1; day <= daysPassed; day++) {
+    // 날짜를 시드로 사용하여 일관된 랜덤값 생성
+    const seed = day * 12345
+    Math.random = () => ((seed * 9301 + 49297) % 233280) / 233280
+    
+    totalApprovalIncrease += getRandomizedIncrease(baseDailyApprovals)
+    totalLoanIncrease += getRandomizedIncrease(baseDailyLoanAmount * 100) / 100 // 소수점 처리
+    totalInquiryIncrease += getRandomizedIncrease(baseDailyInquiries)
+  }
+  
+  // 원래 Math.random 복원
+  Math.random = () => Math.random()
+  
+  const currentApprovals = baseApprovals + totalApprovalIncrease
+  const currentLoanAmount = baseLoanAmount + Math.floor(totalLoanIncrease * 10) / 10 // 소수점 첫째자리까지
+  const currentInquiries = baseInquiries + totalInquiryIncrease
+
   return (
     <section className="bg-white py-16">
       <div className="max-w-4xl mx-auto px-4">
         {/* Main Statistics */}
         <div className="text-center mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            2025년 07월 25일 기준<br/>
-            지금까지 <span className="text-blue-600">11,657,327명</span>이 승인되었습니다.
+            {getCurrentDate()} 기준<br/>
+            지금까지 <span className="text-blue-600">{currentApprovals.toLocaleString()}명</span>이 승인되었습니다.
           </h2>
         </div>
 
@@ -45,11 +104,11 @@ export default function StatisticsSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
               <div className="text-gray-600 text-sm mb-1">누적 대출금액</div>
-              <div className="text-2xl font-bold text-gray-900">7,256억</div>
+              <div className="text-2xl font-bold text-gray-900">{currentLoanAmount.toLocaleString()}억</div>
             </div>
             <div>
               <div className="text-gray-600 text-sm mb-1">누적 대출조회</div>
-              <div className="text-2xl font-bold text-gray-900">34,551,276건</div>
+              <div className="text-2xl font-bold text-gray-900">{currentInquiries.toLocaleString()}건</div>
             </div>
             <div>
               <div className="text-gray-600 text-sm mb-1">평균 대출 승인비율</div>

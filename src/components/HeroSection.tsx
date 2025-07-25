@@ -5,9 +5,9 @@ export default function HeroSection() {
       <div className="absolute inset-0 flex items-start justify-center" style={{ paddingTop: '200px' }}>
         <div>
           <img 
-            src="/triangle-logo.png" 
+            src="/alternative-logo.jpg" 
             alt="Company Logo"
-            className="w-48 h-36 object-contain"
+            className="w-48 h-36 object-contain rounded-lg"
           />
         </div>
       </div>

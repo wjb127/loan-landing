@@ -11,52 +11,52 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
       
-      <main className="bg-slate-200 pb-40 md:pb-60">
+      <main className="bg-white pb-40 md:pb-60">
         {/* Process Steps Section */}
-        <section className="bg-slate-100 py-16">
+        <section className="bg-white py-16">
           <div className="max-w-6xl mx-auto px-4">
-            <h1 className="text-center text-4xl font-bold text-slate-800 mb-4">
-              최저금리 안심대출 <span className="text-amber-600">신청 절차</span>
+            <h1 className="text-center text-4xl font-bold text-gray-900 mb-4">
+              최저금리 안심대출 <span className="text-gray-700">신청 절차</span>
             </h1>
             <ProcessSteps />
           </div>
         </section>
 
-        {/* Dark Navy Background Section */}
-        <section className="py-16 relative" style={{ backgroundColor: '#132458' }}>
+        {/* White Background Section */}
+        <section className="py-16 relative bg-white">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-8">
-              <h2 className="text-white text-3xl font-bold mb-4">
+              <h2 className="text-gray-900 text-3xl font-bold mb-4">
                 근로자 안심대출<br/>
-                <span className="text-amber-400">신청 모집안내</span>
+                <span className="text-gray-700">신청 모집안내</span>
               </h2>
             </div>
           </div>
         </section>
 
         {/* Eligibility Section */}
-        <section className="bg-slate-100 py-16">
+        <section className="bg-white py-16">
           <div className="max-w-6xl mx-auto px-4">
             <EligibilitySection />
           </div>
         </section>
 
         {/* Loan Amount Highlight */}
-        <section className="bg-slate-300 py-12">
+        <section className="bg-white py-12">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <div className="border border-amber-400 border-opacity-50 rounded-lg shadow-xl p-8 inline-block backdrop-blur-sm" style={{ backgroundColor: '#132458' }}>
-              <h3 className="text-2xl font-bold text-amber-400 mb-2">월 납입금</h3>
-              <div className="text-amber-400 text-6xl font-bold mb-2">예시</div>
+            <div className="border border-gray-300 rounded-lg shadow-xl p-8 inline-block bg-white">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">월 납입금</h3>
+              <div className="text-gray-900 text-6xl font-bold mb-2">예시</div>
               <div className="text-right">
-                <span className="text-slate-200 text-xl">5천만원 융통 시 </span>
-                <span className="text-amber-400 text-3xl font-bold">3.9%</span>
+                <span className="text-gray-600 text-xl">5천만원 융통 시 </span>
+                <span className="text-gray-900 text-3xl font-bold">3.9%</span>
               </div>
             </div>
           </div>
         </section>
 
         {/* Target Audience Section */}
-        <section className="bg-slate-100 py-16">
+        <section className="bg-white py-16">
           <div className="max-w-6xl mx-auto px-4">
             <TargetAudienceSection />
           </div>

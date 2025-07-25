@@ -7,7 +7,7 @@ export default function Footer() {
           <div className="space-y-2">
             <div className="text-white font-semibold mb-3">회사 정보</div>
             <div>• 사이트명: 안심대출</div>
-            <div>• 회사명: 주식회사 에이스대부중개법인</div>
+            <div>• 회사명: 주식회사 에이스합동</div>
             <div>• 대부중개업등록번호: 2025-대구남구-0006</div>
             <div>• 사업자등록번호: 601-81-39646</div>
             <div>• 법인등록번호: 170111-0984428</div>
@@ -81,7 +81,7 @@ export default function Footer() {
             본 사업자는 금융소비자 정보포털 파인에서 조회 가능합니다.
           </p>
           <p>
-            © 2025 주식회사 에이스대부중개법인. All rights reserved.
+            © 2025 주식회사 에이스합동. All rights reserved.
           </p>
         </div>
       </div>

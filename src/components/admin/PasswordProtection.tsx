@@ -75,7 +75,7 @@ export default function PasswordProtection({ onAuthenticated }: PasswordProtecti
 
         <div className="mt-6 text-center">
           <p className="text-xs text-gray-500">
-            주식회사 에이스대부중개법인
+주식회사 에이스합동
           </p>
         </div>
       </div>

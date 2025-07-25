@@ -96,9 +96,9 @@ export default function AlwaysOpenLeadForm() {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 shadow-2xl border-t-4 border-amber-400 z-50" style={{ backgroundColor: '#1a2332' }}>
+    <div className="fixed bottom-0 left-0 right-0 shadow-2xl border-t-4 border-amber-400 z-50" style={{ backgroundColor: '#132458' }}>
       <div className="max-w-6xl mx-auto px-4 py-6">
-        <div className="border border-amber-400 border-opacity-40 rounded-lg p-6" style={{ backgroundColor: 'rgba(15, 23, 32, 0.95)' }}>
+        <div className="border border-amber-400 border-opacity-40 rounded-lg p-6" style={{ backgroundColor: 'rgba(19, 36, 88, 0.95)' }}>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-center">
             {/* Left side - Form info */}
             <div className="lg:col-span-1">
@@ -138,7 +138,7 @@ export default function AlwaysOpenLeadForm() {
                       placeholder="이름"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="px-4 py-3 border border-slate-600 text-white placeholder-slate-400 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent" style={{ backgroundColor: '#0f1720' }}
+                      className="px-4 py-3 border border-slate-600 text-white placeholder-slate-400 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent" style={{ backgroundColor: 'rgba(10, 20, 50, 0.9)' }}
                       disabled={isPending}
                     />
                     <input
@@ -147,7 +147,7 @@ export default function AlwaysOpenLeadForm() {
                       placeholder="연락처(-없이 입력)"
                       value={formData.contact}
                       onChange={handleInputChange}
-                      className="px-4 py-3 border border-slate-600 text-white placeholder-slate-400 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent" style={{ backgroundColor: '#0f1720' }}
+                      className="px-4 py-3 border border-slate-600 text-white placeholder-slate-400 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent" style={{ backgroundColor: 'rgba(10, 20, 50, 0.9)' }}
                       disabled={isPending}
                     />
                   </div>

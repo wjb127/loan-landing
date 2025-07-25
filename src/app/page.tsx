@@ -23,7 +23,7 @@ export default function Home() {
         </section>
 
         {/* Dark Navy Background Section */}
-        <section className="py-16 relative" style={{ backgroundColor: '#1a2332' }}>
+        <section className="py-16 relative" style={{ backgroundColor: '#132458' }}>
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-8">
               <h2 className="text-white text-3xl font-bold mb-4">
@@ -44,7 +44,7 @@ export default function Home() {
         {/* Loan Amount Highlight */}
         <section className="bg-slate-300 py-12">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <div className="border border-amber-400 border-opacity-50 rounded-lg shadow-xl p-8 inline-block backdrop-blur-sm" style={{ backgroundColor: '#1a2332' }}>
+            <div className="border border-amber-400 border-opacity-50 rounded-lg shadow-xl p-8 inline-block backdrop-blur-sm" style={{ backgroundColor: '#132458' }}>
               <h3 className="text-2xl font-bold text-amber-400 mb-2">월 납입금</h3>
               <div className="text-amber-400 text-6xl font-bold mb-2">예시</div>
               <div className="text-right">

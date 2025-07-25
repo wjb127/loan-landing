@@ -23,25 +23,28 @@ export default function ProcessSteps() {
         {steps.map((step, index) => (
           <div key={index} className="flex flex-col items-center text-center">
             {/* Step Icon with floating animation */}
-            <div className="w-40 h-40 rounded-full overflow-hidden mb-6 shadow-lg relative bg-gray-200 animate-bounce" style={{animationDuration: '2s', animationDelay: `${index * 0.3}s`}}>
-              <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
+            <div className="w-40 h-40 rounded-full overflow-hidden mb-6 shadow-lg relative bg-white animate-bounce" style={{animationDuration: '2s', animationDelay: `${index * 0.3}s`}}>
+              <div className="w-full h-full flex items-center justify-center">
                 {index === 0 && (
-                  <svg className="w-20 h-20 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>
-                    <circle cx="2" cy="7" r="1"/>
-                    <circle cx="2" cy="12" r="1"/>
-                    <circle cx="2" cy="17" r="1"/>
-                  </svg>
+                  <img 
+                    src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" 
+                    alt="온라인 신청"
+                    className="w-24 h-24 object-contain"
+                  />
                 )}
                 {index === 1 && (
-                  <svg className="w-20 h-20 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-                  </svg>
+                  <img 
+                    src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" 
+                    alt="전문상담사 배정"
+                    className="w-24 h-24 object-contain"
+                  />
                 )}
                 {index === 2 && (
-                  <svg className="w-20 h-20 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zM4 18v-4h3v4h2v-7.5c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2V18h2v-4h3v4h2v2H2v-2h2zm8-7.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
-                  </svg>
+                  <img 
+                    src="https://cdn-icons-png.flaticon.com/512/5290/5290058.png" 
+                    alt="당일조회 및 승인"
+                    className="w-24 h-24 object-contain"
+                  />
                 )}
               </div>
             </div>

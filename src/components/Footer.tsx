@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-blue-900 text-slate-200 py-8 mb-48">
+    <footer className="text-slate-200 py-8 mb-48" style={{ backgroundColor: '#1a2332' }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
           {/* 회사 정보 */}
@@ -50,8 +50,8 @@ export default function Footer() {
         </div>
 
         {/* 대출 상품 정보 */}
-        <div className="border-t border-blue-700 mt-6 pt-6">
-          <div className="bg-blue-800 border border-amber-400 border-opacity-30 p-4 rounded-lg">
+        <div className="border-t border-slate-600 mt-6 pt-6">
+          <div className="border border-amber-400 border-opacity-30 p-4 rounded-lg" style={{ backgroundColor: 'rgba(26, 35, 50, 0.8)' }}>
             <h3 className="text-white font-semibold mb-3">대출 상품 안내</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div className="space-y-1">
@@ -60,7 +60,7 @@ export default function Footer() {
                 <div>• 연체이자율: 약정금리+3% (단, 법정 최고금리 20% 이내)</div>
                 <div>• 채무의 조기상환수수료율: 없음</div>
               </div>
-              <div className="bg-blue-950 border border-amber-400 border-opacity-40 p-3 rounded">
+              <div className="border border-amber-400 border-opacity-40 p-3 rounded" style={{ backgroundColor: '#0f1720' }}>
                 <div className="text-amber-400 font-medium mb-2">대출 총비용 예시</div>
                 <div className="text-sm text-slate-200">
                   1,000,000원을 12개월 동안<br/>
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         {/* 하단 정보 */}
-        <div className="border-t border-blue-700 mt-6 pt-4 text-center text-xs text-slate-300">
+        <div className="border-t border-slate-600 mt-6 pt-4 text-center text-xs text-slate-300">
           <p className="mb-2">
             본 사업자는 금융소비자 정보포털 파인에서 조회 가능합니다.
           </p>

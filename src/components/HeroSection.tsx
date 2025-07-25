@@ -2,7 +2,7 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen relative overflow-hidden" style={{ backgroundColor: '#0a2263' }}>
       {/* Company Logo - Triangle Logo Image Fixed Position */}
-      <div className="absolute inset-0 flex items-start justify-center" style={{ paddingTop: '300px' }}>
+      <div className="absolute inset-0 flex items-start justify-center" style={{ paddingTop: '200px' }}>
         <div>
           <img 
             src="/triangle-logo.png" 
@@ -24,7 +24,7 @@ export default function HeroSection() {
         </div>
 
         {/* Main title - positioned below logo with animations */}
-        <div className="text-center mb-12" style={{ marginTop: '420px' }}>
+        <div className="text-center mb-12" style={{ marginTop: '320px' }}>
           <h1 className="text-amber-400 text-2xl font-medium mb-3 animate-bounce" style={{animationDelay: '0.5s', animationDuration: '2s'}}>
             근로자 대상 안심대출
           </h1>

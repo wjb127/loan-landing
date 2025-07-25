@@ -2,6 +2,7 @@ import HeroSection from '@/components/HeroSection'
 import ProcessSteps from '@/components/ProcessSteps'
 import EligibilitySection from '@/components/EligibilitySection'
 import TargetAudienceSection from '@/components/TargetAudienceSection'
+import StatisticsSection from '@/components/StatisticsSection'
 import Footer from '@/components/Footer'
 import CollapsibleMobileForm from '@/components/CollapsibleMobileForm'
 import ScrollAnimatedText from '@/components/ScrollAnimatedText'
@@ -70,6 +71,11 @@ export default function Home() {
             </ScrollAnimatedText>
           </div>
         </section>
+
+        {/* Statistics Section with Scroll Animation */}
+        <ScrollAnimatedText delay={800}>
+          <StatisticsSection />
+        </ScrollAnimatedText>
       </main>
       
       <Footer />

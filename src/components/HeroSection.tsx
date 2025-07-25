@@ -1,19 +1,18 @@
 export default function HeroSection() {
   return (
-    <section className="min-h-screen relative overflow-hidden" style={{ backgroundColor: '#0a2263' }}>
-      {/* Company Logo - Triangle Logo Image Fixed Position */}
-      <div className="absolute inset-0 flex items-start justify-center" style={{ paddingTop: '200px' }}>
-        <div>
-          <img 
-            src="/alternative-logo.jpg" 
-            alt="Company Logo"
-            className="w-48 h-36 object-contain rounded-lg"
-          />
-        </div>
-      </div>
+    <section className="min-h-screen relative overflow-hidden">
+      {/* Background Image with Blur Effect */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/alternative-logo.jpg)',
+          filter: 'blur(8px)',
+          transform: 'scale(1.1)'
+        }}
+      ></div>
       
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20"></div>
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-black/60"></div>
       
       <div className="max-w-6xl mx-auto px-4 pt-16 pb-16 relative z-10">
         {/* Company registration info - positioned at the top with animation */}
@@ -23,8 +22,8 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Main title - positioned below logo with animations */}
-        <div className="text-center mb-12" style={{ marginTop: '320px' }}>
+        {/* Main title - centered with animations */}
+        <div className="text-center mb-12" style={{ marginTop: '180px' }}>
           <h1 className="text-amber-400 text-2xl font-medium mb-3 animate-bounce" style={{animationDelay: '0.5s', animationDuration: '2s'}}>
             근로자 대상 안심대출
           </h1>

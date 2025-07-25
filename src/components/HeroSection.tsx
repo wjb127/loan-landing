@@ -1,37 +1,14 @@
 export default function HeroSection() {
   return (
     <section className="min-h-screen relative overflow-hidden" style={{ backgroundColor: '#1a237e' }}>
-      {/* Company Logo - New Golden Triangle Design */}
+      {/* Company Logo - Triangle Logo Image */}
       <div className="absolute inset-0 flex items-start justify-center pt-24">
         <div className="animate-bounce" style={{ animationDuration: '3s', animationIterationCount: 'infinite' }}>
-          <svg className="w-80 h-64" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#FFD700" />
-                <stop offset="50%" stopColor="#FFA500" />
-                <stop offset="100%" stopColor="#B8860B" />
-              </linearGradient>
-            </defs>
-            {/* Interlocked Triangle Design */}
-            <g transform="translate(200, 160)">
-              {/* Left Triangle */}
-              <path d="M-120 40 L-40 -80 L-40 40 L-80 40 L-40 80 L-120 80 Z" 
-                    fill="url(#goldGradient)" 
-                    opacity="0.9"/>
-              {/* Center Triangle */}
-              <path d="M-40 -80 L40 -80 L0 40 L-40 40 Z" 
-                    fill="url(#goldGradient)" 
-                    opacity="0.95"/>
-              {/* Right Triangle */}
-              <path d="M40 -80 L120 40 L120 80 L40 80 L40 40 L80 40 Z" 
-                    fill="url(#goldGradient)" 
-                    opacity="0.9"/>
-              {/* Bottom Triangle */}
-              <path d="M-40 40 L0 40 L40 40 L0 120 Z" 
-                    fill="url(#goldGradient)" 
-                    opacity="0.85"/>
-            </g>
-          </svg>
+          <img 
+            src="/triangle-logo.png" 
+            alt="Company Logo"
+            className="w-80 h-64 object-contain"
+          />
         </div>
       </div>
       

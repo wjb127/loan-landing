@@ -31,9 +31,9 @@ export default function HeroSection() {
       <div className="max-w-6xl mx-auto px-4 pt-8 md:pt-16 pb-16 relative z-10">
         {/* Company registration info - mobile optimized */}
         <div className="text-center mb-6">
-          <div className="inline-block border-2 border-blue-900 rounded-full px-4 md:px-8 py-2 md:py-3 text-white text-xs md:text-sm backdrop-blur-sm animate-fadeIn" style={{ backgroundColor: 'rgba(30, 58, 138, 0.2)' }}>
-            <div className="block md:inline">주식회사 에이스대부중개법인</div>
-            <div className="block md:inline md:ml-2">등록번호2025-대구남구-0006</div>
+          <div className="inline-block border-2 border-blue-900 rounded-full px-4 md:px-8 py-3 md:py-3 text-white text-xs md:text-sm backdrop-blur-sm animate-fadeIn" style={{ backgroundColor: 'rgba(30, 58, 138, 0.2)' }}>
+            <div className="block">주식회사 에이스대부중개법인</div>
+            <div className="block">등록번호2025-대구남구-0006</div>
           </div>
         </div>
 

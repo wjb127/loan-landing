@@ -15,7 +15,7 @@ export default function Home() {
       
       <main className="bg-white pb-20 md:pb-60">
         {/* Process Steps Section */}
-        <section className="bg-sky-50 py-16">
+        <section className="bg-sky-100 py-16">
           <div className="max-w-6xl mx-auto px-4">
             <h1 className="text-center text-4xl font-bold text-gray-900 mb-4 animate-slideUp animation-delay-100">
               최저금리 안심대출 <span className="text-blue-900">신청 절차</span>

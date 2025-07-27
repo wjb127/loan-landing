@@ -1,5 +1,9 @@
 'use client'
 
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper/modules'
+import 'swiper/css'
+
 export default function StatisticsSection() {
   // 현재 날짜 가져오기
   const getCurrentDate = () => {
@@ -14,7 +18,7 @@ export default function StatisticsSection() {
   const getDateDifference = () => {
     const baseDate = new Date('2025-07-25')
     const currentDate = new Date()
-    const diffTime = Math.abs(currentDate - baseDate)
+    const diffTime = Math.abs(currentDate.getTime() - baseDate.getTime())
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
     return diffDays
   }
@@ -56,6 +60,16 @@ export default function StatisticsSection() {
   const currentLoanAmount = baseLoanAmount + Math.floor(totalLoanIncrease * 10) / 10 // 소수점 첫째자리까지
   const currentInquiries = baseInquiries + totalInquiryIncrease
 
+  // 승인 사례 데이터
+  const approvalCases = [
+    { type: '대환대출', profile: '30대/직장인/개인신용점수 641점', amount: '7,200만원' },
+    { type: '신규대출', profile: '30대/직장인/개인신용점수 688점', amount: '2,500만원' },
+    { type: '추가대출', profile: '40대/직장인/개인신용점수 717점', amount: '3,500만원' },
+    { type: '신규대출', profile: '20대/직장인/개인신용점수 645점', amount: '5,000만원' },
+    { type: '대환대출', profile: '40대/사업자/개인신용점수 672점', amount: '8,500만원' },
+    { type: '추가대출', profile: '50대/직장인/개인신용점수 703점', amount: '4,200만원' },
+  ]
+
   return (
     <section className="bg-white py-8">
       <div className="max-w-4xl mx-auto px-4">
@@ -67,34 +81,38 @@ export default function StatisticsSection() {
           </h2>
         </div>
 
-        {/* Loan Types Table */}
-        <div className="bg-white rounded-lg shadow-sm border mb-8">
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <tbody className="divide-y divide-gray-200">
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-blue-900 font-medium">대한대출</td>
-                  <td className="px-6 py-4 text-gray-900">30대/직장인/개인신용점수 641점</td>
-                  <td className="px-6 py-4 text-gray-900 font-bold">7,200만원</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-blue-900 font-medium">신규대출</td>
-                  <td className="px-6 py-4 text-gray-900">30대/직장인/개인신용점수 688점</td>
-                  <td className="px-6 py-4 text-gray-900 font-bold">2,500만원</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-blue-900 font-medium">추가대출</td>
-                  <td className="px-6 py-4 text-gray-900">40대/직장인/개인신용점수 717점</td>
-                  <td className="px-6 py-4 text-gray-900 font-bold">3,500만원</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-blue-900 font-medium">신규대출</td>
-                  <td className="px-6 py-4 text-gray-900">20대/직장인/개인신용점수 645점</td>
-                  <td className="px-6 py-4 text-gray-900 font-bold">5,000만원</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        {/* Approval Cases Swiper */}
+        <div className="bg-white rounded-lg shadow-sm border mb-8 overflow-hidden">
+          <Swiper
+            modules={[Autoplay]}
+            direction="vertical"
+            spaceBetween={0}
+            slidesPerView={4}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            className="approval-swiper h-64"
+          >
+            {approvalCases.map((caseItem, index) => (
+              <SwiperSlide key={index}>
+                <div className="px-4 md:px-6 py-3 md:py-4 hover:bg-gray-50 border-b border-gray-100 last:border-b-0">
+                  <div className="flex items-center justify-between">
+                    <div className="text-blue-900 font-medium text-sm md:text-base min-w-[60px] md:min-w-[80px]">
+                      {caseItem.type}
+                    </div>
+                    <div className="text-gray-900 flex-1 px-2 md:px-4 text-xs md:text-base text-center">
+                      {caseItem.profile}
+                    </div>
+                    <div className="text-gray-900 font-bold text-sm md:text-base min-w-[80px] md:min-w-[100px] text-right">
+                      {caseItem.amount}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
         {/* Summary Statistics */}

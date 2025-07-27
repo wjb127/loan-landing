@@ -274,7 +274,7 @@ export default function CollapsibleMobileForm() {
         {/* Collapsed State - Tab */}
         {!isExpanded && (
           <div 
-            className="bg-blue-500 text-white text-center py-4 rounded-t-3xl shadow-lg cursor-pointer transform transition-transform duration-300 hover:scale-105"
+            className="bg-blue-500 text-white text-center py-3 rounded-t-2xl shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 hover:bg-blue-600"
             onClick={() => setIsExpanded(true)}
           >
             <div className="flex items-center justify-center space-x-2">
@@ -289,9 +289,14 @@ export default function CollapsibleMobileForm() {
           </div>
         )}
 
-        {/* Expanded State - Full Form */}
+        {/* Expanded State - Slide Up Form */}
         {isExpanded && (
-          <div className="bg-blue-500 text-white shadow-2xl animate-slideUp">
+          <div className="bg-blue-500 text-white shadow-2xl form-slide-up max-h-[80vh] overflow-y-auto rounded-t-2xl">
+            {/* Drag handle */}
+            <div className="flex justify-center pt-2 pb-1">
+              <div className="w-10 h-1 bg-white bg-opacity-30 rounded-full"></div>
+            </div>
+            
             {/* Header with close button */}
             <div className="flex items-center justify-between p-4 border-b border-blue-400">
               <h3 className="text-lg font-bold">원클릭 상담 신청</h3>
@@ -433,17 +438,34 @@ export default function CollapsibleMobileForm() {
       </div>
 
       <style jsx>{`
-        @keyframes slideUp {
+        @keyframes slideUpForm {
           from {
             transform: translateY(100%);
+            opacity: 0;
           }
           to {
             transform: translateY(0);
+            opacity: 1;
           }
         }
         
-        .animate-slideUp {
-          animation: slideUp 0.3s ease-out;
+        @keyframes slideDownForm {
+          from {
+            transform: translateY(0);
+            opacity: 1;
+          }
+          to {
+            transform: translateY(100%);
+            opacity: 0;
+          }
+        }
+        
+        .form-slide-up {
+          animation: slideUpForm 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+        
+        .form-slide-down {
+          animation: slideDownForm 0.3s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards;
         }
       `}</style>
     </>

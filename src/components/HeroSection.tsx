@@ -38,26 +38,21 @@ export default function HeroSection() {
           <div className="grid grid-cols-3">
             {/* 금리 섹션 */}
             <div className="p-3 md:p-8 text-center border-r border-white animate-fadeIn animation-delay-250">
-              <div className="text-sm md:text-xl font-bold mb-1 md:mb-2 text-blue-900">금리</div>
-              <div className="text-xs md:text-sm opacity-95 mb-1">최저 연</div>
-              <div className="text-lg md:text-4xl font-bold text-blue-900 mb-1">3.9%</div>
-              <div className="text-xs md:text-sm opacity-95">부터</div>
+              <div className="text-sm md:text-xl font-bold mb-2 md:mb-3 text-blue-900">금리</div>
+              <div className="text-xs md:text-base text-gray-700">최저 연 <span className="text-sm md:text-2xl font-bold text-blue-900">3.9%</span> 부터</div>
             </div>
             
             {/* 한도 섹션 */}
             <div className="p-3 md:p-8 text-center border-r border-white animate-fadeIn animation-delay-300">
-              <div className="text-sm md:text-xl font-bold mb-1 md:mb-2 text-blue-900">한도</div>
-              <div className="text-xs md:text-sm opacity-95 mb-1">최대</div>
-              <div className="text-lg md:text-4xl font-bold text-blue-900 mb-1">1억원</div>
-              <div className="text-xs md:text-sm opacity-95">집·자동차소유자는 한도2배</div>
+              <div className="text-sm md:text-xl font-bold mb-2 md:mb-3 text-blue-900">한도</div>
+              <div className="text-xs md:text-base text-gray-700 mb-1">최대 <span className="text-sm md:text-2xl font-bold text-blue-900">1억원</span></div>
+              <div className="text-xs md:text-sm text-gray-700">집·자동차<br/>소유자는 한도2배</div>
             </div>
             
             {/* 상환기간 섹션 */}
             <div className="p-3 md:p-8 text-center animate-fadeIn animation-delay-350">
-              <div className="text-sm md:text-xl font-bold mb-1 md:mb-2 text-blue-900">상환기간</div>
-              <div className="text-xs md:text-sm opacity-95 mb-1">최장</div>
-              <div className="text-lg md:text-4xl font-bold text-blue-900 mb-1">10년</div>
-              <div className="text-sm opacity-95"></div>
+              <div className="text-sm md:text-xl font-bold mb-2 md:mb-3 text-blue-900">상환기간</div>
+              <div className="text-xs md:text-base text-gray-700">최장 <span className="text-sm md:text-2xl font-bold text-blue-900">10년</span></div>
             </div>
           </div>
         </div>

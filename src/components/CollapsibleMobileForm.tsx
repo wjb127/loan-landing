@@ -291,18 +291,18 @@ export default function CollapsibleMobileForm() {
 
         {/* Expanded State - Slide Up Form */}
         {isExpanded && (
-          <div className="bg-blue-500 text-white shadow-2xl form-slide-up max-h-[80vh] overflow-y-auto rounded-t-2xl">
+          <div className="bg-white text-gray-900 shadow-2xl form-slide-up max-h-[80vh] overflow-y-auto rounded-t-2xl border border-gray-200">
             {/* Drag handle */}
             <div className="flex justify-center pt-2 pb-1">
-              <div className="w-10 h-1 bg-white bg-opacity-30 rounded-full"></div>
+              <div className="w-10 h-1 bg-gray-300 rounded-full"></div>
             </div>
             
             {/* Header with close button */}
-            <div className="flex items-center justify-between p-4 border-b border-blue-400">
-              <h3 className="text-lg font-bold">원클릭 상담 신청</h3>
+            <div className="flex items-center justify-between p-4 border-b border-gray-200">
+              <h3 className="text-lg font-bold text-gray-900">원클릭 상담 신청</h3>
               <button 
                 onClick={() => setIsExpanded(false)}
-                className="text-white hover:text-gray-200"
+                className="text-gray-600 hover:text-gray-800"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
@@ -311,27 +311,27 @@ export default function CollapsibleMobileForm() {
             </div>
 
             <div className="p-4">
-              <p className="text-sm mb-2 opacity-90">
+              <p className="text-sm mb-2 text-gray-600">
                 *정부지원/정책자금이 아닌 대출상담서비스입니다.
               </p>
-              <p className="text-xs mb-4 opacity-80">
+              <p className="text-xs mb-4 text-gray-500">
                 ※ 허위, 허황, 파산, 면책, 무직, 신용불량자는 신청이 불가합니다.
               </p>
 
               {submitted ? (
                 <div className="text-center py-8">
                   <div className="text-4xl mb-4">✅</div>
-                  <div className="text-xl font-semibold mb-2">
+                  <div className="text-xl font-semibold mb-2 text-gray-900">
                     신청이 완료되었습니다!
                   </div>
-                  <div className="text-sm opacity-90">
+                  <div className="text-sm text-gray-600">
                     빠른 시일 내에 연락드리겠습니다.
                   </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   {error && (
-                    <div className="text-red-200 text-sm text-center bg-red-700 bg-opacity-50 p-3 rounded">
+                    <div className="text-red-700 text-sm text-center bg-red-100 p-3 rounded">
                       {error}
                     </div>
                   )}
@@ -342,7 +342,7 @@ export default function CollapsibleMobileForm() {
                     placeholder="이름"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white bg-opacity-90 text-gray-900 placeholder-gray-600 rounded-lg focus:ring-2 focus:ring-blue-300 focus:bg-white"
+                    className="w-full px-4 py-3 bg-gray-50 text-gray-900 placeholder-gray-500 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     disabled={isPending}
                   />
                   
@@ -352,19 +352,19 @@ export default function CollapsibleMobileForm() {
                     placeholder="연락처(-없이 입력)"
                     value={formData.contact}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white bg-opacity-90 text-gray-900 placeholder-gray-600 rounded-lg focus:ring-2 focus:ring-blue-300 focus:bg-white"
+                    className="w-full px-4 py-3 bg-gray-50 text-gray-900 placeholder-gray-500 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     disabled={isPending}
                   />
 
                   <div className="space-y-3">
-                    <div className="flex items-center space-x-4 text-sm">
+                    <div className="flex items-center space-x-4 text-sm text-gray-700">
                       <label className="flex items-center">
                         <input
                           type="radio"
                           name="loanType"
                           checked={formData.loanType === '4대보험가입'}
                           onChange={() => handleRadioChange('loanType', '4대보험가입')}
-                          className="mr-2"
+                          className="mr-2 text-blue-500"
                           disabled={isPending}
                         />
                         4대보험가입
@@ -375,21 +375,21 @@ export default function CollapsibleMobileForm() {
                           name="loanType"
                           checked={formData.loanType === '사업자/기타'}
                           onChange={() => handleRadioChange('loanType', '사업자/기타')}
-                          className="mr-2"
+                          className="mr-2 text-blue-500"
                           disabled={isPending}
                         />
                         사업자/기타
                       </label>
                     </div>
 
-                    <div className="flex items-center space-x-4 text-sm">
+                    <div className="flex items-center space-x-4 text-sm text-gray-700">
                       <label className="flex items-center">
                         <input
                           type="radio"
                           name="creditStatus"
                           checked={formData.creditStatus === '신용카드소유'}
                           onChange={() => handleRadioChange('creditStatus', '신용카드소유')}
-                          className="mr-2"
+                          className="mr-2 text-blue-500"
                           disabled={isPending}
                         />
                         신용카드소유
@@ -400,7 +400,7 @@ export default function CollapsibleMobileForm() {
                           name="creditStatus"
                           checked={formData.creditStatus === '미소유'}
                           onChange={() => handleRadioChange('creditStatus', '미소유')}
-                          className="mr-2"
+                          className="mr-2 text-blue-500"
                           disabled={isPending}
                         />
                         미소유
@@ -408,17 +408,17 @@ export default function CollapsibleMobileForm() {
                     </div>
                   </div>
 
-                  <div className="flex items-center text-sm">
+                  <div className="flex items-center text-sm text-gray-700">
                     <input
                       type="checkbox"
                       name="privacyAgreed"
                       checked={formData.privacyAgreed}
                       onChange={handleInputChange}
-                      className="mr-2"
+                      className="mr-2 text-blue-500"
                       disabled={isPending}
                     />
                     <span>개인정보 수집/이용/제공 동의 </span>
-                    <Link href="/privacy" className="text-blue-200 underline ml-1">
+                    <Link href="/privacy" className="text-blue-500 underline ml-1">
                       [보기]
                     </Link>
                   </div>
@@ -426,7 +426,7 @@ export default function CollapsibleMobileForm() {
                   <button
                     type="submit"
                     disabled={isPending || !formData.name || !formData.contact || !formData.privacyAgreed}
-                    className="w-full bg-white text-blue-600 font-bold py-4 px-6 rounded-lg text-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100 transform hover:scale-105"
+                    className="w-full bg-blue-500 text-white font-bold py-4 px-6 rounded-lg text-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-600 transform hover:scale-105"
                   >
                     {isPending ? '처리중...' : '신청'}
                   </button>

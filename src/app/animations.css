@@ -1,7 +1,7 @@
-/* One-time slide up animation */
+/* Slide up animation - faster and smoother */
 @keyframes slideUpOnce {
   from {
-    transform: translateY(30px);
+    transform: translateY(20px);
     opacity: 0;
   }
   to {
@@ -10,7 +10,31 @@
   }
 }
 
-/* Fade in animation */
+/* Slide in from left */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Fade in animation - faster */
 @keyframes fadeInOnce {
   from {
     opacity: 0;
@@ -20,10 +44,10 @@
   }
 }
 
-/* Scale in animation */
+/* Scale in animation - smoother */
 @keyframes scaleInOnce {
   from {
-    transform: scale(0.9);
+    transform: scale(0.95);
     opacity: 0;
   }
   to {
@@ -32,55 +56,107 @@
   }
 }
 
-/* Animation classes */
+/* Bounce in animation */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(0.95);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Rotate fade in */
+@keyframes rotateFadeIn {
+  from {
+    transform: rotate(-5deg) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animation classes - faster and more responsive */
 .animate-slideUp {
-  animation: slideUpOnce 0.6s ease-out forwards;
+  animation: slideUpOnce 0.4s ease-out forwards;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.4s ease-out forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.4s ease-out forwards;
 }
 
 .animate-fadeIn {
-  animation: fadeInOnce 0.6s ease-out forwards;
+  animation: fadeInOnce 0.3s ease-out forwards;
 }
 
 .animate-scaleIn {
-  animation: scaleInOnce 0.5s ease-out forwards;
+  animation: scaleInOnce 0.4s ease-out forwards;
 }
 
-/* Animation delays */
+.animate-bounceIn {
+  animation: bounceIn 0.5s ease-out forwards;
+}
+
+.animate-rotateFadeIn {
+  animation: rotateFadeIn 0.4s ease-out forwards;
+}
+
+/* Faster animation delays */
+.animation-delay-50 {
+  animation-delay: 0.05s;
+}
+
 .animation-delay-100 {
   animation-delay: 0.1s;
+}
+
+.animation-delay-150 {
+  animation-delay: 0.15s;
 }
 
 .animation-delay-200 {
   animation-delay: 0.2s;
 }
 
+.animation-delay-250 {
+  animation-delay: 0.25s;
+}
+
 .animation-delay-300 {
   animation-delay: 0.3s;
+}
+
+.animation-delay-350 {
+  animation-delay: 0.35s;
 }
 
 .animation-delay-400 {
   animation-delay: 0.4s;
 }
 
-.animation-delay-500 {
-  animation-delay: 0.5s;
-}
-
-.animation-delay-600 {
-  animation-delay: 0.6s;
-}
-
-.animation-delay-700 {
-  animation-delay: 0.7s;
-}
-
-.animation-delay-800 {
-  animation-delay: 0.8s;
-}
-
 /* Initial hidden state for animated elements */
 .animate-slideUp,
+.animate-slideInLeft,
+.animate-slideInRight,
 .animate-fadeIn,
-.animate-scaleIn {
+.animate-scaleIn,
+.animate-bounceIn,
+.animate-rotateFadeIn {
   opacity: 0;
 }

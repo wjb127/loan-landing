@@ -17,7 +17,7 @@ export default function HeroSection() {
       <div className="max-w-6xl mx-auto px-4 pt-8 md:pt-16 pb-16 relative z-10">
         {/* Company registration info - slide up animation */}
         <div className="text-center mb-6">
-          <div className="inline-block border-2 border-blue-900 rounded-full px-4 md:px-8 py-3 md:py-3 text-white text-xs md:text-sm backdrop-blur-sm animate-slideUp animation-delay-100" style={{ backgroundColor: 'rgba(30, 58, 138, 0.2)' }}>
+          <div className="inline-block border-2 border-blue-900 rounded-full px-4 md:px-8 py-3 md:py-3 text-white text-xs md:text-sm backdrop-blur-sm animate-fadeIn animation-delay-50" style={{ backgroundColor: 'rgba(30, 58, 138, 0.2)' }}>
             <div className="block">주식회사 에이스대부중개법인</div>
             <div className="block">등록번호2025-대구남구-0006</div>
           </div>
@@ -25,19 +25,19 @@ export default function HeroSection() {
 
         {/* Main title - slide up with delay */}
         <div className="text-center mb-8 md:mb-12" style={{ marginTop: '100px' }}>
-          <h1 className="text-blue-900 text-3xl md:text-2xl font-bold mb-3 animate-slideUp animation-delay-300">
+          <h1 className="text-blue-900 text-3xl md:text-2xl font-bold mb-3 animate-slideInLeft animation-delay-100">
             근로자 대상 안심대출
           </h1>
-          <h2 className="text-white text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg animate-slideUp animation-delay-500">
+          <h2 className="text-white text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg animate-slideInRight animation-delay-150">
             최저금리 안심대출
           </h2>
         </div>
 
         {/* Key information boxes - mobile card design */}
-        <div className="border-2 border-blue-900 rounded-xl max-w-4xl mx-auto shadow-2xl backdrop-blur-md animate-slideUp animation-delay-700 overflow-hidden" style={{backgroundColor: 'rgba(255, 255, 255, 0.95)'}}>
+        <div className="border-2 border-blue-900 rounded-xl max-w-4xl mx-auto shadow-2xl backdrop-blur-md animate-scaleIn animation-delay-200 overflow-hidden" style={{backgroundColor: 'rgba(255, 255, 255, 0.95)'}}>
           <div className="grid grid-cols-3">
             {/* 금리 섹션 */}
-            <div className="p-3 md:p-8 text-center border-r border-white">
+            <div className="p-3 md:p-8 text-center border-r border-white animate-fadeIn animation-delay-250">
               <div className="text-sm md:text-xl font-bold mb-1 md:mb-2 text-blue-900">금리</div>
               <div className="text-xs md:text-sm opacity-95 mb-1">최저 연</div>
               <div className="text-lg md:text-4xl font-bold text-blue-900 mb-1">3.9%</div>
@@ -45,7 +45,7 @@ export default function HeroSection() {
             </div>
             
             {/* 한도 섹션 */}
-            <div className="p-3 md:p-8 text-center border-r border-white">
+            <div className="p-3 md:p-8 text-center border-r border-white animate-fadeIn animation-delay-300">
               <div className="text-sm md:text-xl font-bold mb-1 md:mb-2 text-blue-900">한도</div>
               <div className="text-xs md:text-sm opacity-95 mb-1">최대</div>
               <div className="text-lg md:text-4xl font-bold text-blue-900 mb-1">1억원</div>
@@ -53,7 +53,7 @@ export default function HeroSection() {
             </div>
             
             {/* 상환기간 섹션 */}
-            <div className="p-3 md:p-8 text-center">
+            <div className="p-3 md:p-8 text-center animate-fadeIn animation-delay-350">
               <div className="text-sm md:text-xl font-bold mb-1 md:mb-2 text-blue-900">상환기간</div>
               <div className="text-xs md:text-sm opacity-95 mb-1">최장</div>
               <div className="text-lg md:text-4xl font-bold text-blue-900 mb-1">10년</div>

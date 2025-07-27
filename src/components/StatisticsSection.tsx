@@ -57,7 +57,7 @@ export default function StatisticsSection() {
   const currentInquiries = baseInquiries + totalInquiryIncrease
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-8">
       <div className="max-w-4xl mx-auto px-4">
         {/* Main Statistics */}
         <div className="text-center mb-12">
@@ -115,15 +115,6 @@ export default function StatisticsSection() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <h3 className="text-xl font-bold text-gray-900 mb-6">
-            최저금리 안심대출 <span className="text-blue-900">신청 절차</span>
-          </h3>
-          <button className="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-full text-lg transition-colors">
-            원클릭 상담 신청
-          </button>
-        </div>
       </div>
     </section>
   )

@@ -20,8 +20,11 @@ export default function ProcessSteps() {
   return (
     <div className="mt-12">
       <div className="flex flex-row items-center justify-center gap-4 md:gap-12 relative overflow-x-auto">
-        {steps.map((step, index) => (
-          <div key={index} className={`flex flex-col items-center text-center animate-slideUp animation-delay-${(index + 2) * 100} min-w-0 flex-1`}>
+        {steps.map((step, index) => {
+          const animations = ['animate-bounceIn', 'animate-scaleIn', 'animate-rotateFadeIn'];
+          const delays = ['animation-delay-100', 'animation-delay-200', 'animation-delay-300'];
+          return (
+          <div key={index} className={`flex flex-col items-center text-center ${animations[index]} ${delays[index]} min-w-0 flex-1`}>
             {/* Step Icon */}
             <div className="w-20 h-20 md:w-40 md:h-40 rounded-full overflow-hidden mb-3 md:mb-6 shadow-lg relative bg-white">
               <div className="w-full h-full flex items-center justify-center">
@@ -34,7 +37,7 @@ export default function ProcessSteps() {
                 )}
                 {index === 1 && (
                   <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=center" 
+                    src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=400&fit=crop&crop=center" 
                     alt="전문상담사 배정"
                     className="w-full h-full object-cover rounded-full"
                   />
@@ -68,7 +71,8 @@ export default function ProcessSteps() {
               </div>
             )}
           </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   )

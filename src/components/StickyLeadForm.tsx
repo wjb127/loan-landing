@@ -102,7 +102,7 @@ export default function StickyLeadForm() {
       {/* Collapse/Expand Button */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full bg-blue-600 text-white py-3 px-4 font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+        className="w-full bg-blue-900 text-white py-3 px-4 font-medium hover:bg-blue-800 transition-colors flex items-center justify-center gap-2"
       >
         <span>💰 무료 대출 상담 신청</span>
         <svg 
@@ -139,7 +139,7 @@ export default function StickyLeadForm() {
               onChange={handleInputChange}
               required
               disabled={isPending}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm disabled:opacity-50"
+              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-900 text-sm disabled:opacity-50"
             />
 
             {/* Contact Input */}
@@ -153,7 +153,7 @@ export default function StickyLeadForm() {
                 required
                 disabled={isPending}
                 pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm disabled:opacity-50"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-900 text-sm disabled:opacity-50"
               />
               <p className="text-xs text-gray-500 mt-1">예: 010-1234-5678</p>
             </div>
@@ -170,7 +170,7 @@ export default function StickyLeadForm() {
                       checked={formData.loanType === '4대보험가입'}
                       onChange={() => handleRadioChange('loanType', '4대보험가입')}
                       disabled={isPending}
-                      className="w-3 h-3 text-blue-600 disabled:opacity-50"
+                      className="w-3 h-3 text-blue-900 disabled:opacity-50"
                     />
                     <span className="ml-2 text-sm">4대보험가입</span>
                   </label>
@@ -182,7 +182,7 @@ export default function StickyLeadForm() {
                       checked={formData.loanType === '사업자/기타'}
                       onChange={() => handleRadioChange('loanType', '사업자/기타')}
                       disabled={isPending}
-                      className="w-3 h-3 text-blue-600 disabled:opacity-50"
+                      className="w-3 h-3 text-blue-900 disabled:opacity-50"
                     />
                     <span className="ml-2 text-sm">사업자/기타</span>
                   </label>
@@ -199,7 +199,7 @@ export default function StickyLeadForm() {
                       checked={formData.creditStatus === '신용카드소유'}
                       onChange={() => handleRadioChange('creditStatus', '신용카드소유')}
                       disabled={isPending}
-                      className="w-3 h-3 text-blue-600 disabled:opacity-50"
+                      className="w-3 h-3 text-blue-900 disabled:opacity-50"
                     />
                     <span className="ml-2 text-sm">신용카드소유</span>
                   </label>
@@ -211,7 +211,7 @@ export default function StickyLeadForm() {
                       checked={formData.creditStatus === '미소유'}
                       onChange={() => handleRadioChange('creditStatus', '미소유')}
                       disabled={isPending}
-                      className="w-3 h-3 text-blue-600 disabled:opacity-50"
+                      className="w-3 h-3 text-blue-900 disabled:opacity-50"
                     />
                     <span className="ml-2 text-sm">미소유</span>
                   </label>
@@ -228,11 +228,11 @@ export default function StickyLeadForm() {
                 checked={formData.privacyAgreed}
                 onChange={handleInputChange}
                 disabled={isPending}
-                className="w-4 h-4 text-blue-600 mt-1 disabled:opacity-50"
+                className="w-4 h-4 text-blue-900 mt-1 disabled:opacity-50"
               />
               <label htmlFor="sticky-privacy" className="text-xs text-gray-600">
                 개인정보 수집/이용/제공 동의{' '}
-                <Link href="/privacy" className="text-blue-600 underline">
+                <Link href="/privacy" className="text-blue-900 underline">
                   [더보기]
                 </Link>
               </label>
@@ -242,7 +242,7 @@ export default function StickyLeadForm() {
             <button
               type="submit"
               disabled={isPending}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-bold py-3 px-4 rounded transition-all"
+              className="w-full bg-blue-900 hover:bg-blue-800 disabled:bg-blue-700 text-white font-bold py-3 px-4 rounded transition-all"
             >
               {isPending ? (
                 <span className="flex items-center justify-center">

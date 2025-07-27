@@ -89,7 +89,7 @@ export default function LeadForm() {
         </p>
         <button
           onClick={() => setSubmitted(false)}
-          className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
+          className="text-blue-900 hover:text-blue-800 font-medium transition-colors"
         >
           다시 신청하기
         </button>
@@ -154,7 +154,7 @@ export default function LeadForm() {
                 checked={formData.loanType === '4대보험가입'}
                 onChange={() => handleRadioChange('loanType', '4대보험가입')}
                 disabled={isPending}
-                className="w-4 h-4 text-blue-600 disabled:opacity-50"
+                className="w-4 h-4 text-blue-900 disabled:opacity-50"
               />
               <span className="ml-2 text-sm text-gray-700">4대보험가입</span>
             </label>
@@ -166,7 +166,7 @@ export default function LeadForm() {
                 checked={formData.loanType === '사업자/기타'}
                 onChange={() => handleRadioChange('loanType', '사업자/기타')}
                 disabled={isPending}
-                className="w-4 h-4 text-blue-600 disabled:opacity-50"
+                className="w-4 h-4 text-blue-900 disabled:opacity-50"
               />
               <span className="ml-2 text-sm text-gray-700">사업자/기타</span>
             </label>
@@ -183,7 +183,7 @@ export default function LeadForm() {
                 checked={formData.creditStatus === '신용카드소유'}
                 onChange={() => handleRadioChange('creditStatus', '신용카드소유')}
                 disabled={isPending}
-                className="w-4 h-4 text-blue-600 disabled:opacity-50"
+                className="w-4 h-4 text-blue-900 disabled:opacity-50"
               />
               <span className="ml-2 text-sm text-gray-700">신용카드소유</span>
             </label>
@@ -195,7 +195,7 @@ export default function LeadForm() {
                 checked={formData.creditStatus === '미소유'}
                 onChange={() => handleRadioChange('creditStatus', '미소유')}
                 disabled={isPending}
-                className="w-4 h-4 text-blue-600 disabled:opacity-50"
+                className="w-4 h-4 text-blue-900 disabled:opacity-50"
               />
               <span className="ml-2 text-sm text-gray-700">미소유</span>
             </label>
@@ -211,10 +211,10 @@ export default function LeadForm() {
             checked={formData.privacyAgreed}
             onChange={handleInputChange}
             disabled={isPending}
-            className="w-4 h-4 text-blue-600 mt-1 disabled:opacity-50"
+            className="w-4 h-4 text-blue-900 mt-1 disabled:opacity-50"
           />
           <label htmlFor="privacy" className="text-xs text-gray-600">
-            개인정보 수집/이용/제공 동의 <span className="text-blue-600 underline cursor-pointer">[더보기]</span>
+            개인정보 수집/이용/제공 동의 <span className="text-blue-900 underline cursor-pointer">[더보기]</span>
           </label>
         </div>
 
@@ -222,7 +222,7 @@ export default function LeadForm() {
         <button
           type="submit"
           disabled={isPending}
-          className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-[1.02] active:scale-[0.98] disabled:transform-none"
+          className="w-full bg-blue-900 hover:bg-blue-800 disabled:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-[1.02] active:scale-[0.98] disabled:transform-none"
         >
           {isPending ? (
             <span className="flex items-center justify-center">

@@ -65,7 +65,7 @@ export default function StatisticsSection() {
         <div className="text-center mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
             {getCurrentDate()} 기준<br/>
-            지금까지 <span className="text-gray-700">{currentApprovals.toLocaleString()}명</span>이 승인되었습니다.
+            지금까지 <span className="text-blue-900">{currentApprovals.toLocaleString()}명</span>이 승인되었습니다.
           </h2>
         </div>
 
@@ -75,22 +75,22 @@ export default function StatisticsSection() {
             <table className="w-full">
               <tbody className="divide-y divide-gray-200">
                 <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-700 font-medium">대한대출</td>
+                  <td className="px-6 py-4 text-blue-900 font-medium">대한대출</td>
                   <td className="px-6 py-4 text-gray-900">30대/직장인/개인신용점수 641점</td>
                   <td className="px-6 py-4 text-gray-900 font-bold">7,200만원</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-700 font-medium">신규대출</td>
+                  <td className="px-6 py-4 text-blue-900 font-medium">신규대출</td>
                   <td className="px-6 py-4 text-gray-900">30대/직장인/개인신용점수 688점</td>
                   <td className="px-6 py-4 text-gray-900 font-bold">2,500만원</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-700 font-medium">추가대출</td>
+                  <td className="px-6 py-4 text-blue-900 font-medium">추가대출</td>
                   <td className="px-6 py-4 text-gray-900">40대/직장인/개인신용점수 717점</td>
                   <td className="px-6 py-4 text-gray-900 font-bold">3,500만원</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-700 font-medium">신규대출</td>
+                  <td className="px-6 py-4 text-blue-900 font-medium">신규대출</td>
                   <td className="px-6 py-4 text-gray-900">20대/직장인/개인신용점수 645점</td>
                   <td className="px-6 py-4 text-gray-900 font-bold">5,000만원</td>
                 </tr>
@@ -120,9 +120,9 @@ export default function StatisticsSection() {
         {/* Bottom CTA */}
         <div className="text-center mt-12">
           <h3 className="text-xl font-bold text-gray-900 mb-6">
-            최저금리 안심대출 <span className="text-gray-700">신청 절차</span>
+            최저금리 안심대출 <span className="text-blue-900">신청 절차</span>
           </h3>
-          <button className="bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full text-lg transition-colors">
+          <button className="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-full text-lg transition-colors">
             원클릭 상담 신청
           </button>
         </div>

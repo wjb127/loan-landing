@@ -4,7 +4,7 @@ export default function TargetAudienceSection() {
       {/* Left Side - Icon and Title */}
       <div className="text-center lg:text-left">
         <div className="inline-flex items-center justify-center w-24 h-24 bg-blue-100 rounded-lg mb-6 animate-bounce" style={{animationDuration: '3s'}}>
-          <svg className="w-14 h-14 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+          <svg className="w-14 h-14 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
             <defs>
               <linearGradient id="clipboardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#3B82F6" />
@@ -25,7 +25,7 @@ export default function TargetAudienceSection() {
         </div>
         <h2 className="text-3xl font-bold text-gray-800 mb-4">
           근로자 안심대출<br/>
-          <span className="text-blue-600">신청 대상자</span>
+          <span className="text-blue-900">신청 대상자</span>
         </h2>
         <div className="space-y-4 text-gray-700">
           <p>
@@ -42,29 +42,29 @@ export default function TargetAudienceSection() {
 
       {/* Right Side - Target Audience Details */}
       <div className="space-y-6">
-        <div className="bg-blue-50 p-6 rounded-lg">
-          <h3 className="text-lg font-semibold text-blue-800 mb-4">
-            <span className="text-blue-600">대상</span> 4대보험 가입 직장인 및 소득증명 가능자
+        <div className="bg-gray-100 p-6 rounded-lg">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">
+            <span className="text-blue-900">대상</span> 4대보험 가입 직장인 및 소듍증명 가능자
           </h3>
-          <h3 className="text-lg font-semibold text-blue-800 mb-4">
-            <span className="text-blue-600">소득</span> 재직기간 3개월 이상 근로자
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">
+            <span className="text-blue-900">소듍</span> 재직기간 3개월 이상 근로자
           </h3>
-          <h3 className="text-lg font-semibold text-blue-800 mb-4">
-            <span className="text-blue-600">신용</span> 신용점수 600점 이상 우대
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">
+            <span className="text-blue-900">신용</span> 신용점수 600점 이상 우대
           </h3>
-          <h3 className="text-lg font-semibold text-blue-800 mb-4">
-            <span className="text-blue-600">나이</span> 만 25세~55세 대상
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">
+            <span className="text-blue-900">나이</span> 만 25세~55세 대상
           </h3>
-          <h3 className="text-lg font-semibold text-blue-800 mb-4">
-            <span className="text-blue-600">부채</span> 담보대출을 제외한 연봉대비 200% 미만
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">
+            <span className="text-blue-900">부채</span> 담보대출을 제외한 연봉대비 200% 미만
           </h3>
         </div>
 
-        <div className="bg-red-50 p-6 rounded-lg">
-          <h3 className="text-lg font-semibold text-red-800 mb-4">
-            <span className="text-red-600">불가</span> 무직 · 연체 · 회생 · 파산자 불가
+        <div className="bg-gray-50 p-6 rounded-lg">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">
+            <span className="text-gray-700">불가</span> 무직 · 연체 · 회생 · 파산자 불가
           </h3>
-          <div className="text-sm text-red-700 space-y-1">
+          <div className="text-sm text-gray-700 space-y-1">
             <p>• 3개월내 연체이력보유자 불가</p>
             <p>• 미필자 불가</p>
           </div>

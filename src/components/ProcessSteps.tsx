@@ -27,23 +27,23 @@ export default function ProcessSteps() {
               <div className="w-full h-full flex items-center justify-center">
                 {index === 0 && (
                   <img 
-                    src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" 
+                    src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=400&fit=crop&crop=center" 
                     alt="온라인 신청"
-                    className="w-24 h-24 object-contain"
+                    className="w-full h-full object-cover rounded-full"
                   />
                 )}
                 {index === 1 && (
                   <img 
-                    src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" 
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=center" 
                     alt="전문상담사 배정"
-                    className="w-24 h-24 object-contain"
+                    className="w-full h-full object-cover rounded-full"
                   />
                 )}
                 {index === 2 && (
                   <img 
-                    src="https://cdn-icons-png.flaticon.com/512/5290/5290058.png" 
+                    src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=400&fit=crop&crop=center" 
                     alt="당일조회 및 승인"
-                    className="w-24 h-24 object-contain"
+                    className="w-full h-full object-cover rounded-full"
                   />
                 )}
               </div>

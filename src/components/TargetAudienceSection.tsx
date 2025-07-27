@@ -2,8 +2,8 @@ export default function TargetAudienceSection() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       {/* Left Side - Icon and Title */}
-      <div className="text-center lg:text-left">
-        <div className="inline-flex items-center justify-center w-24 h-24 bg-blue-100 rounded-lg mb-6 animate-bounce" style={{animationDuration: '3s'}}>
+      <div className="text-center lg:text-left animate-slideUp animation-delay-100">
+        <div className="inline-flex items-center justify-center w-24 h-24 bg-blue-100 rounded-lg mb-6 animate-scaleIn animation-delay-200">
           <svg className="w-14 h-14 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
             <defs>
               <linearGradient id="clipboardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -41,8 +41,8 @@ export default function TargetAudienceSection() {
       </div>
 
       {/* Right Side - Target Audience Details */}
-      <div className="space-y-6">
-        <div className="bg-gray-100 p-6 rounded-lg">
+      <div className="space-y-6 animate-slideUp animation-delay-400">
+        <div className="bg-gray-100 p-6 rounded-lg animate-slideUp animation-delay-500">
           <h3 className="text-lg font-semibold text-gray-800 mb-4">
             <span className="text-blue-900">대상</span> 4대보험 가입 직장인 및 소듍증명 가능자
           </h3>
@@ -60,7 +60,7 @@ export default function TargetAudienceSection() {
           </h3>
         </div>
 
-        <div className="bg-gray-50 p-6 rounded-lg">
+        <div className="bg-gray-50 p-6 rounded-lg animate-slideUp animation-delay-600">
           <h3 className="text-lg font-semibold text-gray-800 mb-4">
             <span className="text-gray-700">불가</span> 무직 · 연체 · 회생 · 파산자 불가
           </h3>

@@ -63,6 +63,46 @@ export default function AdminDashboard() {
             created_at: new Date(Date.now() - 172800000).toISOString(),
             status: 'converted',
             notes: '대출종류: 4대보험가입, 신용상태: 신용카드소유'
+          },
+          {
+            id: '4',
+            name: '정수현',
+            contact: '010-1111-2222',
+            created_at: new Date(Date.now() - 259200000).toISOString(), // 3 days ago
+            status: 'new',
+            notes: '대출종류: 4대보험가입, 신용상태: 신용카드소유'
+          },
+          {
+            id: '5',
+            name: '최지혜',
+            contact: '010-3333-4444',
+            created_at: new Date(Date.now() - 345600000).toISOString(), // 4 days ago
+            status: 'contacted',
+            notes: '대출종류: 사업자/기타, 신용상태: 신용카드소유'
+          },
+          {
+            id: '6',
+            name: '한동훈',
+            contact: '010-5555-6666',
+            created_at: new Date(Date.now() - 432000000).toISOString(), // 5 days ago
+            status: 'converted',
+            notes: '대출종류: 4대보험가입, 신용상태: 미소유'
+          },
+          {
+            id: '7',
+            name: '송민지',
+            contact: '010-7777-8888',
+            created_at: new Date(Date.now() - 518400000).toISOString(), // 6 days ago
+            status: 'new',
+            notes: '대출종류: 사업자/기타, 신용상태: 신용카드소유'
+          },
+          {
+            id: '8',
+            name: '강태원',
+            contact: '010-9999-0000',
+            created_at: new Date().toISOString(), // Today - another one
+            status: 'new',
+            notes: '대출종류: 4대보험가입, 신용상태: 신용카드소유'
           }
         ]
         await new Promise(resolve => setTimeout(resolve, 1000)) // Simulate loading

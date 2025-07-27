@@ -79,7 +79,7 @@ export default function LeadCharts({ leads }: LeadChartsProps) {
     return data
   }, [leads, selectedPeriod])
 
-  const maxValue = Math.max(...Object.values(chartData), 5)
+  const maxValue = Math.max(...Object.values(chartData), 1) // At least 1 for proper scaling
   const entries = Object.entries(chartData)
 
   return (
@@ -107,25 +107,39 @@ export default function LeadCharts({ leads }: LeadChartsProps) {
       <div className="relative">
         <div className="flex items-end justify-between space-x-2 h-64">
           {entries.map(([label, value]) => {
-            const height = maxValue > 0 ? (value / maxValue) * 100 : 0
+            const heightPercentage = maxValue > 0 ? (value / maxValue) * 100 : 0
+            const minHeight = 4 // Minimum height in pixels
+            const actualHeight = value > 0 ? Math.max(heightPercentage, 10) : 0 // Show at least 10% if has data
+            
             return (
               <div key={label} className="flex-1 flex flex-col items-center">
-                <div className="relative w-full">
+                <div className="relative w-full h-64 flex items-end">
                   <div 
-                    className="bg-blue-600 rounded-t transition-all duration-300 min-h-[8px] relative group cursor-pointer hover:bg-blue-700"
-                    style={{ height: `${Math.max(height, 3)}%` }}
+                    className={`w-full rounded-t transition-all duration-300 relative group cursor-pointer ${
+                      value > 0 ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-200'
+                    }`}
+                    style={{ 
+                      height: value > 0 ? `${actualHeight}%` : `${minHeight}px`,
+                      minHeight: `${minHeight}px`
+                    }}
                   >
                     {/* Tooltip */}
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity z-10">
                       <div className="bg-gray-900 text-white text-xs rounded py-1 px-2 whitespace-nowrap">
                         {value}건
                       </div>
                       <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-4 border-transparent border-t-gray-900"></div>
                     </div>
+                    {/* Value label on bar */}
+                    {value > 0 && (
+                      <div className="absolute top-1 left-1/2 transform -translate-x-1/2 text-white text-xs font-medium">
+                        {value}
+                      </div>
+                    )}
                   </div>
-                  <div className="text-center text-xs text-gray-600 mt-2 transform -rotate-45 origin-center whitespace-nowrap">
-                    {label}
-                  </div>
+                </div>
+                <div className="text-center text-xs text-gray-600 mt-2 transform -rotate-45 origin-center whitespace-nowrap">
+                  {label}
                 </div>
               </div>
             )

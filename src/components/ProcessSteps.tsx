@@ -19,14 +19,14 @@ export default function ProcessSteps() {
 
   return (
     <div className="mt-12">
-      <div className="flex flex-row items-center justify-center gap-4 md:gap-12 relative overflow-x-auto">
+      <div className="flex flex-row items-center justify-center gap-2 md:gap-8 relative overflow-x-auto">
         {steps.map((step, index) => {
           const animations = ['animate-bounceIn', 'animate-scaleIn', 'animate-rotateFadeIn'];
           const delays = ['animation-delay-100', 'animation-delay-200', 'animation-delay-300'];
           return (
           <div key={index} className={`flex flex-col items-center text-center ${animations[index]} ${delays[index]} min-w-0 flex-1`}>
             {/* Step Icon */}
-            <div className="w-20 h-20 md:w-40 md:h-40 rounded-full overflow-hidden mb-3 md:mb-6 shadow-lg relative bg-white">
+            <div className="w-24 h-24 md:w-44 md:h-44 rounded-full overflow-hidden mb-3 md:mb-6 shadow-lg relative bg-white">
               <div className="w-full h-full flex items-center justify-center">
                 {index === 0 && (
                   <img 
@@ -64,7 +64,7 @@ export default function ProcessSteps() {
             
             {/* Arrow (except for last step) */}
             {index < steps.length - 1 && (
-              <div className="absolute top-10 md:top-20 left-full transform -translate-y-1/2 translate-x-2 md:translate-x-4">
+              <div className="absolute top-12 md:top-22 left-full transform -translate-y-1/2 translate-x-2 md:translate-x-4">
                 <svg className="w-4 h-4 md:w-8 md:h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>

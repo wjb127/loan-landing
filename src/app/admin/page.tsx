@@ -97,18 +97,26 @@ export default function AdminDashboard() {
   }
 
   const deleteLead = async (leadId: string) => {
+    console.log('🗑️ Attempting to delete lead with ID:', leadId)
     startTransition(async () => {
       try {
+        console.log('🗑️ Making DELETE request to:', `/api/leads/${leadId}`)
         const response = await fetch(`/api/leads/${leadId}`, {
           method: 'DELETE'
         })
 
+        console.log('🗑️ Delete response status:', response.status)
+        const responseData = await response.json()
+        console.log('🗑️ Delete response data:', responseData)
+
         if (!response.ok) throw new Error('Failed to delete lead')
 
+        console.log('🗑️ Removing lead from local state')
         setLeads(leads.filter(lead => lead.id !== leadId))
         setSelectedLead(null)
+        console.log('🗑️ Lead deleted successfully')
       } catch (err) {
-        console.error('Error deleting lead:', err)
+        console.error('❌ Error deleting lead:', err)
         setError('리드 삭제 중 오류가 발생했습니다.')
       }
     })

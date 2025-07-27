@@ -39,8 +39,15 @@ export default function LeadDetailModal({
   }
 
   const handleDelete = async () => {
-    await onDeleteLead(lead.id!)
-    onClose()
+    console.log('🗑️ LeadDetailModal: Delete button clicked for lead:', lead.id)
+    try {
+      await onDeleteLead(lead.id!)
+      console.log('🗑️ LeadDetailModal: Delete completed, closing modal')
+      setShowDeleteConfirm(false)
+      onClose()
+    } catch (error) {
+      console.error('❌ LeadDetailModal: Delete failed:', error)
+    }
   }
 
   return (

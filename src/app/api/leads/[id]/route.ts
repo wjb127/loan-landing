@@ -42,26 +42,32 @@ export async function DELETE(
 ) {
   try {
     const { id } = await context.params
+    console.log('🗑️ API DELETE endpoint called for ID:', id)
 
     if (isDemoMode || !supabase) {
       // Demo mode: Return mock success
       console.log('🗑️ Demo Mode - Lead deleted:', { id })
-      return NextResponse.json({ success: true })
+      return NextResponse.json({ success: true, id, mode: 'demo' })
     }
 
     // Production mode: Delete from Supabase
+    console.log('🗑️ Production Mode - Attempting Supabase delete for ID:', id)
     const { error } = await supabase
       .from('kmong_2_leads')
       .delete()
       .eq('id', id)
 
-    if (error) throw error
+    if (error) {
+      console.error('❌ Supabase delete error:', error)
+      throw error
+    }
 
-    return NextResponse.json({ success: true })
+    console.log('✅ Supabase delete successful for ID:', id)
+    return NextResponse.json({ success: true, id, mode: 'production' })
   } catch (error) {
-    console.error('Error deleting lead:', error)
+    console.error('❌ API DELETE error:', error)
     return NextResponse.json(
-      { error: 'Failed to delete lead' },
+      { error: 'Failed to delete lead', details: error.message },
       { status: 500 }
     )
   }

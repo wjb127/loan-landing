@@ -67,7 +67,10 @@ export async function DELETE(
   } catch (error) {
     console.error('❌ API DELETE error:', error)
     return NextResponse.json(
-      { error: 'Failed to delete lead', details: error.message },
+      { 
+        error: 'Failed to delete lead', 
+        details: error instanceof Error ? error.message : String(error) 
+      },
       { status: 500 }
     )
   }

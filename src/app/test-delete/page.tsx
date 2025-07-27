@@ -26,7 +26,7 @@ Response: ${JSON.stringify(data, null, 2)}
       `.trim())
     } catch (error) {
       console.error('🧪 Test delete error:', error)
-      setResult(`Error: ${error.message}`)
+      setResult(`Error: ${error instanceof Error ? error.message : String(error)}`)
     } finally {
       setIsLoading(false)
     }
@@ -44,10 +44,10 @@ Response: ${JSON.stringify(data, null, 2)}
 GET /api/leads
 Status: ${response.status}
 Leads count: ${data.data?.length || 0}
-Leads: ${JSON.stringify(data.data?.map(l => ({ id: l.id, name: l.name })) || [], null, 2)}
+Leads: ${JSON.stringify(data.data?.map((l: any) => ({ id: l.id, name: l.name })) || [], null, 2)}
       `.trim())
     } catch (error) {
-      setResult(`Error: ${error.message}`)
+      setResult(`Error: ${error instanceof Error ? error.message : String(error)}`)
     } finally {
       setIsLoading(false)
     }

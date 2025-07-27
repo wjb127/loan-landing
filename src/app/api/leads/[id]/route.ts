@@ -4,10 +4,10 @@ import { supabase, isDemoMode, type Lead } from '@/lib/supabase'
 // PUT - Update lead
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params
+    const { id } = await context.params
     const updateData = await request.json()
 
     if (isDemoMode || !supabase) {
@@ -38,10 +38,10 @@ export async function PUT(
 // DELETE - Delete lead
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params
+    const { id } = await context.params
 
     if (isDemoMode || !supabase) {
       // Demo mode: Return mock success

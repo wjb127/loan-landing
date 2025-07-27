@@ -22,11 +22,6 @@ export default function StatisticsSection() {
   // 동적 통계 계산 (랜덤성 추가)
   const daysPassed = getDateDifference()
   
-  // 기본 일일 증가량에 랜덤성 추가 (±20% 변동)
-  const getRandomizedIncrease = (baseAmount: number) => {
-    const randomFactor = 0.8 + (Math.random() * 0.4) // 0.8 ~ 1.2 사이
-    return Math.floor(baseAmount * randomFactor)
-  }
   
   const baseDailyApprovals = 13 // 일일 승인자 증가량 (127 → 13)
   const baseDailyLoanAmount = 0.18 // 일일 대출금액 증가량 (1.8억 → 0.18억)
@@ -44,15 +39,18 @@ export default function StatisticsSection() {
   for (let day = 1; day <= daysPassed; day++) {
     // 날짜를 시드로 사용하여 일관된 랜덤값 생성
     const seed = day * 12345
-    Math.random = () => ((seed * 9301 + 49297) % 233280) / 233280
+    const seededRandom = () => ((seed * 9301 + 49297) % 233280) / 233280
     
-    totalApprovalIncrease += getRandomizedIncrease(baseDailyApprovals)
-    totalLoanIncrease += getRandomizedIncrease(baseDailyLoanAmount * 100) / 100 // 소수점 처리
-    totalInquiryIncrease += getRandomizedIncrease(baseDailyInquiries)
+    // 기본 일일 증가량에 랜덤성 추가 (±20% 변동)
+    const getRandomizedIncreaseForDay = (baseAmount: number) => {
+      const randomFactor = 0.8 + (seededRandom() * 0.4) // 0.8 ~ 1.2 사이
+      return Math.floor(baseAmount * randomFactor)
+    }
+    
+    totalApprovalIncrease += getRandomizedIncreaseForDay(baseDailyApprovals)
+    totalLoanIncrease += getRandomizedIncreaseForDay(baseDailyLoanAmount * 100) / 100 // 소수점 처리
+    totalInquiryIncrease += getRandomizedIncreaseForDay(baseDailyInquiries)
   }
-  
-  // 원래 Math.random 복원
-  Math.random = () => Math.random()
   
   const currentApprovals = baseApprovals + totalApprovalIncrease
   const currentLoanAmount = baseLoanAmount + Math.floor(totalLoanIncrease * 10) / 10 // 소수점 첫째자리까지

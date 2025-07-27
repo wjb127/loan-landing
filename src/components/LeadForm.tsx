@@ -42,27 +42,22 @@ export default function LeadForm() {
     
     startTransition(async () => {
       try {
-        const leadData: Omit<Lead, 'id' | 'created_at'> = {
+        const leadData = {
           name: formData.name,
           contact: formData.contact,
           notes: `대출종류: ${formData.loanType}, 신용상태: ${formData.creditStatus}`,
-          status: 'new'
+          status: 'new' as const
         }
 
-        if (isDemoMode || !supabase) {
-          // Demo mode: Just log the data
-          console.log('🎯 Demo Mode - Lead submitted:', leadData)
-          await new Promise(resolve => setTimeout(resolve, 1000)) // Simulate API call
-        } else {
-          // Production mode: Save to Supabase
-          const { error: insertError } = await supabase
-            .from('kmong_2_leads')
-            .insert([leadData])
+        const response = await fetch('/api/leads', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(leadData)
+        })
 
-          if (insertError) {
-            throw insertError
-          }
-        }
+        if (!response.ok) throw new Error('Failed to submit form')
 
         setSubmitted(true)
         setFormData({

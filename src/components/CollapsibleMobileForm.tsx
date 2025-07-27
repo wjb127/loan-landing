@@ -74,45 +74,34 @@ export default function CollapsibleMobileForm() {
       try {
         setError('')
 
-        if (isDemoMode || !supabase) {
-          console.log('📝 Demo Mode - Form submitted:', formData)
-          setSubmitted(true)
-          setTimeout(() => {
-            setSubmitted(false)
-            setFormData({
-              name: '',
-              contact: '',
-              loanType: '4대보험가입',
-              creditStatus: '신용카드소유',
-              privacyAgreed: false
-            })
-          }, 3000)
-        } else {
-          const leadData: Omit<Lead, 'id' | 'created_at'> = {
-            name: formData.name,
-            contact: formData.contact,
-            notes: `대출종류: ${formData.loanType}, 신용상태: ${formData.creditStatus}`,
-            status: 'new'
-          }
-
-          const { error } = await supabase
-            .from('kmong_2_leads')
-            .insert([leadData])
-
-          if (error) throw error
-
-          setSubmitted(true)
-          setTimeout(() => {
-            setSubmitted(false)
-            setFormData({
-              name: '',
-              contact: '',
-              loanType: '4대보험가입',
-              creditStatus: '신용카드소유',
-              privacyAgreed: false
-            })
-          }, 3000)
+        const leadData = {
+          name: formData.name,
+          contact: formData.contact,
+          notes: `대출종류: ${formData.loanType}, 신용상태: ${formData.creditStatus}`,
+          status: 'new' as const
         }
+
+        const response = await fetch('/api/leads', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(leadData)
+        })
+
+        if (!response.ok) throw new Error('Failed to submit form')
+
+        setSubmitted(true)
+        setTimeout(() => {
+          setSubmitted(false)
+          setFormData({
+            name: '',
+            contact: '',
+            loanType: '4대보험가입',
+            creditStatus: '신용카드소유',
+            privacyAgreed: false
+          })
+        }, 3000)
       } catch (err) {
         console.error('Error submitting form:', err)
         setError('신청 중 오류가 발생했습니다. 다시 시도해주세요.')

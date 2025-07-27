@@ -36,87 +36,11 @@ export default function AdminDashboard() {
     try {
       setLoading(true)
       
-      if (isDemoMode || !supabase) {
-        // Demo mode: Use sample data
-        console.log('📊 Demo Mode - Loading sample leads')
-        const sampleLeads: Lead[] = [
-          {
-            id: '1',
-            name: '김철수',
-            contact: '010-1234-5678',
-            created_at: new Date().toISOString(),
-            status: 'new',
-            notes: '대출종류: 4대보험가입, 신용상태: 신용카드소유'
-          },
-          {
-            id: '2',
-            name: '이영희',
-            contact: '010-9876-5432',
-            created_at: new Date(Date.now() - 86400000).toISOString(),
-            status: 'contacted',
-            notes: '대출종류: 사업자/기타, 신용상태: 미소유'
-          },
-          {
-            id: '3',
-            name: '박민수',
-            contact: '010-5555-5555',
-            created_at: new Date(Date.now() - 172800000).toISOString(),
-            status: 'converted',
-            notes: '대출종류: 4대보험가입, 신용상태: 신용카드소유'
-          },
-          {
-            id: '4',
-            name: '정수현',
-            contact: '010-1111-2222',
-            created_at: new Date(Date.now() - 259200000).toISOString(), // 3 days ago
-            status: 'new',
-            notes: '대출종류: 4대보험가입, 신용상태: 신용카드소유'
-          },
-          {
-            id: '5',
-            name: '최지혜',
-            contact: '010-3333-4444',
-            created_at: new Date(Date.now() - 345600000).toISOString(), // 4 days ago
-            status: 'contacted',
-            notes: '대출종류: 사업자/기타, 신용상태: 신용카드소유'
-          },
-          {
-            id: '6',
-            name: '한동훈',
-            contact: '010-5555-6666',
-            created_at: new Date(Date.now() - 432000000).toISOString(), // 5 days ago
-            status: 'converted',
-            notes: '대출종류: 4대보험가입, 신용상태: 미소유'
-          },
-          {
-            id: '7',
-            name: '송민지',
-            contact: '010-7777-8888',
-            created_at: new Date(Date.now() - 518400000).toISOString(), // 6 days ago
-            status: 'new',
-            notes: '대출종류: 사업자/기타, 신용상태: 신용카드소유'
-          },
-          {
-            id: '8',
-            name: '강태원',
-            contact: '010-9999-0000',
-            created_at: new Date().toISOString(), // Today - another one
-            status: 'new',
-            notes: '대출종류: 4대보험가입, 신용상태: 신용카드소유'
-          }
-        ]
-        await new Promise(resolve => setTimeout(resolve, 1000)) // Simulate loading
-        setLeads(sampleLeads)
-      } else {
-        // Production mode: Fetch from Supabase
-        const { data, error } = await supabase
-          .from('kmong_2_leads')
-          .select('*')
-          .order('created_at', { ascending: false })
-
-        if (error) throw error
-        setLeads(data || [])
-      }
+      const response = await fetch('/api/leads')
+      if (!response.ok) throw new Error('Failed to fetch leads')
+      
+      const result = await response.json()
+      setLeads(result.data || [])
     } catch (err) {
       console.error('Error fetching leads:', err)
       setError('데이터를 불러오는 중 오류가 발생했습니다.')
@@ -128,25 +52,19 @@ export default function AdminDashboard() {
   const updateLeadStatus = async (leadId: string, status: Lead['status']) => {
     startTransition(async () => {
       try {
-        if (isDemoMode || !supabase) {
-          // Demo mode: Update local state only
-          setLeads(leads.map(lead => 
-            lead.id === leadId ? { ...lead, status } : lead
-          ))
-          console.log('✅ Demo Mode - Status updated:', { leadId, status })
-        } else {
-          // Production mode: Update in Supabase
-          const { error } = await supabase
-            .from('kmong_2_leads')
-            .update({ status })
-            .eq('id', leadId)
+        const response = await fetch(`/api/leads/${leadId}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ status })
+        })
 
-          if (error) throw error
-          
-          setLeads(leads.map(lead => 
-            lead.id === leadId ? { ...lead, status } : lead
-          ))
-        }
+        if (!response.ok) throw new Error('Failed to update lead status')
+
+        setLeads(leads.map(lead => 
+          lead.id === leadId ? { ...lead, status } : lead
+        ))
         setSelectedLead(null)
       } catch (err) {
         console.error('Error updating lead status:', err)
@@ -158,25 +76,19 @@ export default function AdminDashboard() {
   const updateLeadNotes = async (leadId: string, notes: string) => {
     startTransition(async () => {
       try {
-        if (isDemoMode || !supabase) {
-          // Demo mode: Update local state only
-          setLeads(leads.map(lead => 
-            lead.id === leadId ? { ...lead, notes } : lead
-          ))
-          console.log('📝 Demo Mode - Notes updated:', { leadId, notes })
-        } else {
-          // Production mode: Update in Supabase
-          const { error } = await supabase
-            .from('kmong_2_leads')
-            .update({ notes })
-            .eq('id', leadId)
+        const response = await fetch(`/api/leads/${leadId}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ notes })
+        })
 
-          if (error) throw error
-          
-          setLeads(leads.map(lead => 
-            lead.id === leadId ? { ...lead, notes } : lead
-          ))
-        }
+        if (!response.ok) throw new Error('Failed to update lead notes')
+
+        setLeads(leads.map(lead => 
+          lead.id === leadId ? { ...lead, notes } : lead
+        ))
       } catch (err) {
         console.error('Error updating notes:', err)
         setError('메모 업데이트 중 오류가 발생했습니다.')
@@ -187,21 +99,14 @@ export default function AdminDashboard() {
   const deleteLead = async (leadId: string) => {
     startTransition(async () => {
       try {
-        if (isDemoMode || !supabase) {
-          // Demo mode: Remove from local state only
-          setLeads(leads.filter(lead => lead.id !== leadId))
-          console.log('🗑️ Demo Mode - Lead deleted:', { leadId })
-        } else {
-          // Production mode: Delete from Supabase
-          const { error } = await supabase
-            .from('kmong_2_leads')
-            .delete()
-            .eq('id', leadId)
+        const response = await fetch(`/api/leads/${leadId}`, {
+          method: 'DELETE'
+        })
 
-          if (error) throw error
-          
-          setLeads(leads.filter(lead => lead.id !== leadId))
-        }
+        if (!response.ok) throw new Error('Failed to delete lead')
+
+        setLeads(leads.filter(lead => lead.id !== leadId))
+        setSelectedLead(null)
       } catch (err) {
         console.error('Error deleting lead:', err)
         setError('리드 삭제 중 오류가 발생했습니다.')

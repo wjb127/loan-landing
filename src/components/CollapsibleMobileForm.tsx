@@ -25,23 +25,23 @@ export default function CollapsibleMobileForm() {
       const windowHeight = window.innerHeight
       const documentHeight = document.documentElement.scrollHeight
       
-      // Consider "bottom" when user is within 100px of the actual bottom
-      const threshold = 100
+      // Consider "bottom" when user is within 200px of the actual bottom
+      const threshold = 200
       const isNearBottom = scrollTop + windowHeight >= documentHeight - threshold
       
       setIsAtBottom(isNearBottom)
       
-      // Auto-expand when at bottom on mobile
-      if (isNearBottom && window.innerWidth < 768) {
+      // Auto-expand when at bottom on mobile, but don't auto-collapse
+      if (isNearBottom && window.innerWidth < 768 && !isExpanded) {
         setIsExpanded(true)
       }
     }
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     handleScroll() // Check initial position
 
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [isExpanded])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target

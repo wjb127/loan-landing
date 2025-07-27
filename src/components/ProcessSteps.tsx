@@ -19,11 +19,11 @@ export default function ProcessSteps() {
 
   return (
     <div className="mt-12">
-      <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 relative">
+      <div className="flex flex-row items-center justify-center gap-4 md:gap-12 relative overflow-x-auto">
         {steps.map((step, index) => (
-          <div key={index} className={`flex flex-col items-center text-center animate-slideUp animation-delay-${(index + 2) * 100}`}>
+          <div key={index} className={`flex flex-col items-center text-center animate-slideUp animation-delay-${(index + 2) * 100} min-w-0 flex-1`}>
             {/* Step Icon */}
-            <div className="w-40 h-40 rounded-full overflow-hidden mb-6 shadow-lg relative bg-white">
+            <div className="w-20 h-20 md:w-40 md:h-40 rounded-full overflow-hidden mb-3 md:mb-6 shadow-lg relative bg-white">
               <div className="w-full h-full flex items-center justify-center">
                 {index === 0 && (
                   <img 
@@ -50,19 +50,19 @@ export default function ProcessSteps() {
             </div>
             
             {/* Step Title */}
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-sm md:text-xl font-bold text-gray-800 mb-1 md:mb-2">
               {step.title}
             </h3>
             
             {/* Step Description */}
-            <p className="text-sm text-gray-600 whitespace-pre-line leading-relaxed">
+            <p className="text-xs md:text-sm text-gray-600 whitespace-pre-line leading-relaxed">
               {step.description}
             </p>
             
             {/* Arrow (except for last step) */}
             {index < steps.length - 1 && (
-              <div className="hidden md:block absolute top-20 left-full transform -translate-y-1/2 translate-x-4">
-                <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="absolute top-10 md:top-20 left-full transform -translate-y-1/2 translate-x-2 md:translate-x-4">
+                <svg className="w-4 h-4 md:w-8 md:h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>

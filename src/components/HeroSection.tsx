@@ -35,28 +35,28 @@ export default function HeroSection() {
 
         {/* Key information boxes - mobile card design */}
         <div className="border-2 border-blue-900 rounded-xl max-w-4xl mx-auto shadow-2xl backdrop-blur-md animate-slideUp animation-delay-700 overflow-hidden" style={{backgroundColor: 'rgba(255, 255, 255, 0.95)'}}>
-          <div className="grid grid-cols-1 md:grid-cols-3">
+          <div className="grid grid-cols-3">
             {/* 금리 섹션 */}
-            <div className="p-6 md:p-8 text-center border-b md:border-b-0 md:border-r border-white">
-              <div className="text-xl md:text-xl font-bold mb-2 text-blue-900">금리</div>
-              <div className="text-sm opacity-95 mb-1">최저 연</div>
-              <div className="text-3xl md:text-4xl font-bold text-blue-900 mb-1">3.9%</div>
-              <div className="text-sm opacity-95">부터</div>
+            <div className="p-3 md:p-8 text-center border-r border-white">
+              <div className="text-sm md:text-xl font-bold mb-1 md:mb-2 text-blue-900">금리</div>
+              <div className="text-xs md:text-sm opacity-95 mb-1">최저 연</div>
+              <div className="text-lg md:text-4xl font-bold text-blue-900 mb-1">3.9%</div>
+              <div className="text-xs md:text-sm opacity-95">부터</div>
             </div>
             
             {/* 한도 섹션 */}
-            <div className="p-6 md:p-8 text-center border-b md:border-b-0 md:border-r border-white">
-              <div className="text-xl md:text-xl font-bold mb-2 text-blue-900">한도</div>
-              <div className="text-sm opacity-95 mb-1">최대</div>
-              <div className="text-3xl md:text-4xl font-bold text-blue-900 mb-1">1억원</div>
-              <div className="text-sm opacity-95">집·자동차소유자는 한도2배</div>
+            <div className="p-3 md:p-8 text-center border-r border-white">
+              <div className="text-sm md:text-xl font-bold mb-1 md:mb-2 text-blue-900">한도</div>
+              <div className="text-xs md:text-sm opacity-95 mb-1">최대</div>
+              <div className="text-lg md:text-4xl font-bold text-blue-900 mb-1">1억원</div>
+              <div className="text-xs md:text-sm opacity-95">집·자동차소유자는 한도2배</div>
             </div>
             
             {/* 상환기간 섹션 */}
-            <div className="p-6 md:p-8 text-center">
-              <div className="text-xl md:text-xl font-bold mb-2 text-blue-900">상환기간</div>
-              <div className="text-sm opacity-95 mb-1">최장</div>
-              <div className="text-3xl md:text-4xl font-bold text-blue-900 mb-1">10년</div>
+            <div className="p-3 md:p-8 text-center">
+              <div className="text-sm md:text-xl font-bold mb-1 md:mb-2 text-blue-900">상환기간</div>
+              <div className="text-xs md:text-sm opacity-95 mb-1">최장</div>
+              <div className="text-lg md:text-4xl font-bold text-blue-900 mb-1">10년</div>
               <div className="text-sm opacity-95"></div>
             </div>
           </div>

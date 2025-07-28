@@ -39,7 +39,7 @@ export default function HeroSection() {
             {/* 금리 섹션 */}
             <div className="py-6 px-3 md:p-8 text-center border-r border-white animate-fadeIn animation-delay-250">
               <div className="text-sm md:text-xl font-bold mb-3 md:mb-3 text-blue-900">금리</div>
-              <div className="text-xs md:text-base text-gray-700">최저 연 <span className="text-sm md:text-2xl font-bold text-blue-900">3.9%</span> 부터</div>
+              <div className="text-xs md:text-base text-gray-700">최저 연 <span className="text-sm md:text-2xl font-bold text-blue-900 whitespace-nowrap">3.9% 부터</span></div>
             </div>
             
             {/* 한도 섹션 */}

@@ -12,7 +12,7 @@ export default function StickyLeadForm() {
     contact: '',
     loanType: '4대보험가입',
     creditStatus: '신용카드소유',
-    privacyAgreed: false
+    privacyAgreed: true
   })
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
@@ -70,7 +70,7 @@ export default function StickyLeadForm() {
           contact: '',
           loanType: '4대보험가입',
           creditStatus: '신용카드소유',
-          privacyAgreed: false
+          privacyAgreed: true
         })
         
         // Auto collapse after submission

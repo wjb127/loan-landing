@@ -6,16 +6,23 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",
+    "@types/nodemailer": "^6.4.17",
     "next": "15.0.3",
+    "nodemailer": "^7.0.5",
     "react": "^19.0.0-rc",
     "react-dom": "^19.0.0-rc",
+    "resend": "^4.7.0",
     "swiper": "^11.2.10"
   },
   "devDependencies": {
+    "@playwright/test": "^1.54.1",
     "@types/node": "^20",
     "@types/react": "^19.0.0-rc",
     "@types/react-dom": "^19.0.0-rc",

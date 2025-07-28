@@ -259,7 +259,7 @@ export default function CollapsibleMobileForm() {
       </div>
 
       {/* Mobile Version - Collapsible */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-[60]">
         {/* Collapsed State - Tab */}
         {!isExpanded && (
           <div 

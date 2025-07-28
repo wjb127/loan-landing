@@ -13,15 +13,15 @@ export default function ScrollAnimatedText({
   className = '', 
   delay = 0 
 }: ScrollAnimatedTextProps) {
-  const { ref, isVisible } = useScrollAnimation(0.2)
+  const { ref, isVisible } = useScrollAnimation(0.3)
 
   return (
     <div 
       ref={ref}
-      className={`transition-all duration-1000 ease-out ${
+      className={`transition-all duration-500 ease-out ${
         isVisible 
-          ? 'opacity-100 transform translate-y-0' 
-          : 'opacity-0 transform translate-y-8'
+          ? 'opacity-100 transform translate-x-0' 
+          : 'opacity-0 transform md:translate-y-8 translate-x-8 md:translate-x-0'
       } ${className}`}
       style={{
         transitionDelay: `${delay}ms`

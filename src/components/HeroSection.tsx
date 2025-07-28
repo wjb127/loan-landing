@@ -34,7 +34,7 @@ export default function HeroSection() {
         </div>
 
         {/* Key information boxes - mobile card design */}
-        <div className="border-2 border-blue-900 rounded-xl max-w-4xl mx-auto shadow-2xl backdrop-blur-md animate-scaleIn animation-delay-200 overflow-hidden" style={{backgroundColor: 'rgba(255, 255, 255, 0.95)'}}>
+        <div className="mt-12 md:mt-0 border-2 border-blue-900 rounded-xl max-w-4xl mx-auto shadow-2xl backdrop-blur-md animate-scaleIn animation-delay-200 overflow-hidden" style={{backgroundColor: 'rgba(255, 255, 255, 0.95)'}}>
           <div className="grid grid-cols-3">
             {/* 금리 섹션 */}
             <div className="py-6 px-3 md:p-8 text-center border-r border-white animate-fadeIn animation-delay-250">

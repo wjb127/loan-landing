@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="min-h-screen relative overflow-hidden">
+    <section className="min-h-[80vh] md:min-h-screen relative overflow-hidden">
       {/* Background Image with Blur Effect */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"

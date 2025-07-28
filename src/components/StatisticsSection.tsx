@@ -27,13 +27,13 @@ export default function StatisticsSection() {
   const daysPassed = getDateDifference()
   
   
-  const baseDailyApprovals = 13 // 일일 승인자 증가량 (127 → 13)
-  const baseDailyLoanAmount = 0.18 // 일일 대출금액 증가량 (1.8억 → 0.18억)
-  const baseDailyInquiries = 850 // 조회수는 유지
+  const baseDailyApprovals = 9.7 // 일일 승인자 증가량 (하루 9.7명)
+  const baseDailyLoanAmount = 2 // 일일 대출금액 증가량 (하루 2억)
+  const baseDailyInquiries = 10 // 일일 조회 증가량 (하루 10명)
   
-  const baseApprovals = 11657327
-  const baseLoanAmount = 7256 // 억원
-  const baseInquiries = 34551276
+  const baseApprovals = 970 // 기준 승인자 970명
+  const baseLoanAmount = 150 // 기준 누적대출금액 150억원 (200억 미만)
+  const baseInquiries = 1000 // 기준 누적 대출조회 1000명
   
   // 각 날짜별 누적 증가량 계산 (랜덤성 적용)
   let totalApprovalIncrease = 0
@@ -128,7 +128,7 @@ export default function StatisticsSection() {
             </div>
             <div>
               <div className="text-gray-600 text-sm mb-1">평균 대출 승인비율</div>
-              <div className="text-2xl font-bold text-gray-900">97.38%</div>
+              <div className="text-2xl font-bold text-gray-900">97%</div>
             </div>
           </div>
         </div>

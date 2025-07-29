@@ -32,13 +32,13 @@ export default function TargetAudienceSection() {
       </div>
 
       {/* 설명 텍스트 */}
-      <div className="mb-8 space-y-4 text-gray-700 leading-relaxed text-left max-w-4xl md:mx-auto">
+      <div className="mb-8 space-y-4 text-gray-700 leading-relaxed text-left max-w-2xl md:mx-auto">
         <p>대출상품은 조건이 다양하므로<br/>본인에게 적합한 대출상품에 대해 구체적으로 확인 후<br/>진행하여야 합니다.</p>
         <p>모바일 안심신청시 대출 사기나 불법 사채에 대한<br/>걱정 없이 안전하게 상담을 받을 수 있습니다.</p>
       </div>
 
       {/* 대상 조건들 */}
-      <div className="space-y-4 text-left max-w-4xl md:mx-auto">
+      <div className="space-y-4 text-left max-w-2xl md:mx-auto">
         <div className="text-lg">
           <span className="text-blue-900 font-bold">대상</span>
           <span className="text-gray-900 font-bold ml-2">4대보험 가입 직장인 및 소득증명 가능자</span>

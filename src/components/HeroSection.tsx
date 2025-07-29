@@ -60,7 +60,7 @@ export default function HeroSection() {
         </div>
 
         {/* 통화하기 버튼 */}
-        <div className="text-center mt-6 md:mt-12 animate-fadeIn animation-delay-400">
+        <div className="text-center mt-6 md:mt-20 animate-fadeIn animation-delay-400">
           <a 
             href="tel:1577-8505" 
             className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full text-lg md:text-xl transition-all duration-300 transform hover:scale-105 shadow-lg"

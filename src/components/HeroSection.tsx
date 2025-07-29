@@ -37,26 +37,39 @@ export default function HeroSection() {
         <div className="border-2 border-blue-900 rounded-xl max-w-4xl mx-auto shadow-2xl backdrop-blur-md animate-scaleIn animation-delay-200 overflow-hidden mt-12 md:-mt-4" style={{backgroundColor: 'rgba(255, 255, 255, 0.95)'}}>
           <div className="grid grid-cols-3">
             {/* 금리 섹션 */}
-            <div className="px-1 py-2 md:p-8 text-center border-r border-white animate-fadeIn animation-delay-250">
-              <div className="text-sm md:text-xl font-bold mb-1 md:mb-3 text-blue-900">금리</div>
+            <div className="py-6 px-3 md:p-8 text-center border-r border-white animate-fadeIn animation-delay-250">
+              <div className="text-base md:text-2xl font-bold mb-3 md:mb-3 text-blue-900">금리</div>
               <div className="text-xs md:text-base text-gray-700 whitespace-nowrap leading-tight">
-                <span className="text-xs">최저 연</span> <span className="text-xs md:text-2xl font-bold text-blue-900">3.9%</span> <span className="text-xs">부터</span>
+                최저 연 <span className="text-xs md:text-2xl font-bold text-blue-900">3.9%</span> 부터
               </div>
             </div>
             
             {/* 한도 섹션 */}
             <div className="py-6 px-3 md:p-8 text-center border-r border-white animate-fadeIn animation-delay-300">
-              <div className="text-sm md:text-xl font-bold mb-3 md:mb-3 text-blue-900">한도</div>
+              <div className="text-base md:text-2xl font-bold mb-3 md:mb-3 text-blue-900">한도</div>
               <div className="text-[10px] md:text-base text-gray-700 mb-2">최대 <span className="text-xs md:text-2xl font-bold text-blue-900">1억원</span></div>
               <div className="text-[10px] md:text-sm text-gray-700">집·자동차<br/>소유자는 한도2배</div>
             </div>
             
             {/* 상환기간 섹션 */}
             <div className="py-6 px-3 md:p-8 text-center animate-fadeIn animation-delay-350">
-              <div className="text-sm md:text-xl font-bold mb-3 md:mb-3 text-blue-900">상환기간</div>
+              <div className="text-base md:text-2xl font-bold mb-3 md:mb-3 text-blue-900">상환기간</div>
               <div className="text-[10px] md:text-base text-gray-700">최장 <span className="text-xs md:text-2xl font-bold text-blue-900">10년</span></div>
             </div>
           </div>
+        </div>
+
+        {/* 통화하기 버튼 */}
+        <div className="text-center mt-6 md:mt-8 animate-fadeIn animation-delay-400">
+          <a 
+            href="tel:1577-8505" 
+            className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full text-lg md:text-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            <svg className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+            바로 통화하기
+          </a>
         </div>
 
       </div>

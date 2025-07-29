@@ -37,8 +37,8 @@ export default function HeroSection() {
         <div className="border-2 border-blue-900 rounded-xl max-w-4xl mx-auto shadow-2xl backdrop-blur-md animate-scaleIn animation-delay-200 overflow-hidden mt-12 md:-mt-4" style={{backgroundColor: 'rgba(255, 255, 255, 0.95)'}}>
           <div className="grid grid-cols-3">
             {/* 금리 섹션 */}
-            <div className="px-1 py-2 md:p-8 text-center border-r border-white animate-fadeIn animation-delay-250">
-              <div className="text-base md:text-2xl font-bold mb-1 md:mb-3 text-blue-900">금리</div>
+            <div className="py-6 px-3 md:p-8 text-center border-r border-white animate-fadeIn animation-delay-250">
+              <div className="text-base md:text-2xl font-bold mb-3 md:mb-3 text-blue-900">금리</div>
               <div className="text-xs md:text-base text-gray-700 whitespace-nowrap leading-tight">
                 최저 연 <span className="text-xs md:text-2xl font-bold text-blue-900">3.9%</span> 부터
               </div>

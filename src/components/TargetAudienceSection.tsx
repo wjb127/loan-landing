@@ -2,7 +2,7 @@ export default function TargetAudienceSection() {
   return (
     <div className="bg-white py-8">
       {/* 상단 아이콘과 제목 */}
-      <div className="flex items-center justify-center md:justify-center mb-8">
+      <div className="flex items-center justify-center mb-8">
         <div className="w-20 h-20 mr-6">
           <svg viewBox="0 0 100 100" className="w-full h-full">
             {/* 클립보드 */}
@@ -25,20 +25,20 @@ export default function TargetAudienceSection() {
             <line x1="30" y1="65" x2="55" y2="65" stroke="#9ca3af" strokeWidth="1"/>
           </svg>
         </div>
-        <div className="text-left md:text-center">
+        <div className="text-left">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">근로자 안심대출</h2>
           <h3 className="text-2xl md:text-3xl font-bold text-blue-900">신청 대상자</h3>
         </div>
       </div>
 
       {/* 설명 텍스트 */}
-      <div className="mb-8 space-y-4 text-gray-700 leading-relaxed text-left md:text-center">
+      <div className="mb-8 space-y-4 text-gray-700 leading-relaxed text-left max-w-4xl md:mx-auto">
         <p>대출상품은 조건이 다양하므로<br/>본인에게 적합한 대출상품에 대해 구체적으로 확인 후<br/>진행하여야 합니다.</p>
         <p>모바일 안심신청시 대출 사기나 불법 사채에 대한<br/>걱정 없이 안전하게 상담을 받을 수 있습니다.</p>
       </div>
 
       {/* 대상 조건들 */}
-      <div className="space-y-4 text-left md:text-center max-w-4xl md:mx-auto">
+      <div className="space-y-4 text-left max-w-4xl md:mx-auto">
         <div className="text-lg">
           <span className="text-blue-900 font-bold">대상</span>
           <span className="text-gray-900 font-bold ml-2">4대보험 가입 직장인 및 소득증명 가능자</span>
@@ -71,9 +71,9 @@ export default function TargetAudienceSection() {
             <span className="text-gray-900 font-bold ml-2">무직 · 연체 · 회생 · 파산자 불가</span>
           </div>
           
-          <div className="md:mx-auto md:max-w-fit space-y-1 text-gray-900 ml-0 md:ml-0">
-            <div>3개월내 연체이력보유자 불가</div>
-            <div>미필자 불가</div>
+          <div className="space-y-1 text-gray-900 text-lg">
+            <div><span className="text-blue-900 font-bold">　　</span><span className="text-gray-900 font-bold ml-2">3개월내 연체이력보유자 불가</span></div>
+            <div><span className="text-blue-900 font-bold">　　</span><span className="text-gray-900 font-bold ml-2">미필자 불가</span></div>
           </div>
         </div>
       </div>

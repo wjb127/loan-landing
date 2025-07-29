@@ -40,7 +40,7 @@ export default function HeroSection() {
             <div className="px-1 py-2 md:p-8 text-center border-r border-white animate-fadeIn animation-delay-250">
               <div className="text-sm md:text-xl font-bold mb-1 md:mb-3 text-blue-900">금리</div>
               <div className="text-xs md:text-base text-gray-700 whitespace-nowrap leading-tight">
-                <span className="text-xs">최저 연</span> <span className="text-xs md:text-2xl font-bold text-blue-900">3.9%</span> <span className="text-xs">부터</span>
+                최저 연 <span className="text-xs md:text-2xl font-bold text-blue-900">3.9%</span> 부터
               </div>
             </div>
             

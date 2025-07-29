@@ -33,52 +33,57 @@ export default function TargetAudienceSection() {
         </div>
       </div>
 
-      {/* 중앙 정렬된 컨테이너 */}
+      {/* 텍스트 섹션 - 아이콘 아래 정렬 */}
       <div className="flex justify-center">
-        <div className="max-w-2xl">
-          {/* 설명 텍스트 */}
-          <div className="mb-8 space-y-4 text-gray-700 leading-relaxed text-left">
-            <p>대출상품은 조건이 다양하므로<br/>본인에게 적합한 대출상품에 대해 구체적으로 확인 후<br/>진행하여야 합니다.</p>
-            <p>모바일 안심신청시 대출 사기나 불법 사채에 대한<br/>걱정 없이 안전하게 상담을 받을 수 있습니다.</p>
-          </div>
-
-          {/* 대상 조건들 */}
-          <div className="space-y-4 text-left">
-            <div className="text-lg">
-              <span className="text-blue-900 font-bold">대상</span>
-              <span className="text-gray-900 font-bold ml-2">4대보험 가입 직장인 및 소득증명 가능자</span>
-            </div>
-            
-            <div className="text-lg">
-              <span className="text-blue-900 font-bold">소득</span>
-              <span className="text-gray-900 font-bold ml-2">재직기간 3개월 이상 근로자</span>
-            </div>
-            
-            <div className="text-lg">
-              <span className="text-blue-900 font-bold">신용</span>
-              <span className="text-gray-900 font-bold ml-2">신용점수 600점 이상 우대</span>
-            </div>
-            
-            <div className="text-lg">
-              <span className="text-blue-900 font-bold">나이</span>
-              <span className="text-gray-900 font-bold ml-2">만 25세~55세 대상</span>
-            </div>
-            
-            <div className="text-lg">
-              <span className="text-blue-900 font-bold">부채</span>
-              <span className="text-gray-900 font-bold ml-2">담보대출을 제외한 연봉대비 200% 미만</span>
+        <div className="flex">
+          {/* 아이콘 위치와 맞추기 위한 왼쪽 여백 */}
+          <div className="w-20 mr-6"></div>
+          {/* 텍스트 컨테이너 */}
+          <div className="max-w-2xl">
+            {/* 설명 텍스트 */}
+            <div className="mb-8 space-y-4 text-gray-700 leading-relaxed text-left">
+              <p>대출상품은 조건이 다양하므로<br/>본인에게 적합한 대출상품에 대해 구체적으로 확인 후<br/>진행하여야 합니다.</p>
+              <p>모바일 안심신청시 대출 사기나 불법 사채에 대한<br/>걱정 없이 안전하게 상담을 받을 수 있습니다.</p>
             </div>
 
-            {/* 불가 조건들 */}
-            <div className="mt-6 space-y-2">
+            {/* 대상 조건들 */}
+            <div className="space-y-4 text-left">
               <div className="text-lg">
-                <span className="text-blue-900 font-bold">불가</span>
-                <span className="text-gray-900 font-bold ml-2">무직 · 연체 · 회생 · 파산자 불가</span>
+                <span className="text-blue-900 font-bold">대상</span>
+                <span className="text-gray-900 font-bold ml-2">4대보험 가입 직장인 및 소득증명 가능자</span>
               </div>
               
-              <div className="space-y-1 text-gray-900 text-lg">
-                <div><span className="text-blue-900 font-bold">　　</span><span className="text-gray-900 font-bold ml-2">3개월내 연체이력보유자 불가</span></div>
-                <div><span className="text-blue-900 font-bold">　　</span><span className="text-gray-900 font-bold ml-2">미필자 불가</span></div>
+              <div className="text-lg">
+                <span className="text-blue-900 font-bold">소득</span>
+                <span className="text-gray-900 font-bold ml-2">재직기간 3개월 이상 근로자</span>
+              </div>
+              
+              <div className="text-lg">
+                <span className="text-blue-900 font-bold">신용</span>
+                <span className="text-gray-900 font-bold ml-2">신용점수 600점 이상 우대</span>
+              </div>
+              
+              <div className="text-lg">
+                <span className="text-blue-900 font-bold">나이</span>
+                <span className="text-gray-900 font-bold ml-2">만 25세~55세 대상</span>
+              </div>
+              
+              <div className="text-lg">
+                <span className="text-blue-900 font-bold">부채</span>
+                <span className="text-gray-900 font-bold ml-2">담보대출을 제외한 연봉대비 200% 미만</span>
+              </div>
+
+              {/* 불가 조건들 */}
+              <div className="mt-6 space-y-2">
+                <div className="text-lg">
+                  <span className="text-blue-900 font-bold">불가</span>
+                  <span className="text-gray-900 font-bold ml-2">무직 · 연체 · 회생 · 파산자 불가</span>
+                </div>
+                
+                <div className="space-y-1 text-gray-900 text-lg">
+                  <div><span className="text-blue-900 font-bold">　　</span><span className="text-gray-900 font-bold ml-2">3개월내 연체이력보유자 불가</span></div>
+                  <div><span className="text-blue-900 font-bold">　　</span><span className="text-gray-900 font-bold ml-2">미필자 불가</span></div>
+                </div>
               </div>
             </div>
           </div>
